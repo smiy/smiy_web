@@ -44,15 +44,15 @@ rev="dc:isVersionOf" href="http://purl.org/ontology/co/20100709/counterontology.
     <dd><a href="http://purl.org/ontology/co/20100630/counterontology.html">http://purl.org/ontology/co/20100630/counterontology.html</a> (<a href="http://purl.org/ontology/co/20100630/counterontology.owl">OWL</a>, <a href="http://purl.org/ontology/co/20100630/counterontology.n3">N3</a>)</dd>
 
     <dt>Authors:</dt>
-    <dd><a href="http://moustaki.org/">Yves Raimond</a> (<a href="http://www.bbc.co.uk">BBC</a>),<br/>
+    <dd><a about="http://purl.org/ontology/co/counterontology.html" rel="rdfs:seeAlso" href="http://moustaki.org/">Yves Raimond</a> (<a href="http://www.bbc.co.uk">BBC</a>),<br/>
     <a href="mailto:nick@example.org">Mats Skillingstad</a> (COMPANY),<br/>
-    <a href="http://smiy.wordpress.com/author/zazi0815/">Bob Ferris</a> (<a href="http://smiy.wordpress.com/">SMI</a>)</dd>
+    <a about="http://purl.org/ontology/co/counterontology.html" rel="rdfs:seeAlso" href="http://smiy.wordpress.com/author/zazi0815/">Bob Ferris</a> (<a about="http://purl.org/ontology/co/counterontology.html" rel="rdfs:seeAlso" href="http://smiy.wordpress.com/">SMI</a>)</dd>
   </dl>
 
   <p class="copyright"><span about="http://purl.org/ontology/co/core#" property="dc:rights">Copyright &#169; 2010 Yves Raimond, Mats Skillingstad and Bob Ferris</span></p>
 
   <div about="http://purl.org/ontology/co/counterontology.html" rel="dc:conformsTo"
-     resource="http://www.w3.org/TR/rdfa-syntax" />
+     resource="http://www.w3.org/TR/rdfa-syntax"></div>
   <p>
     <a href="http://validator.w3.org/check?uri=referer"><img style="border: 0; float: right; padding: 5px;"
         src="http://www.w3.org/Icons/valid-xhtml-rdfa"
@@ -84,7 +84,7 @@ the Semantic Web. This document contains a RDFa description of the Counter Ontol
 
     <p>
 The Counter Ontology is a generalisation of the <a about="http://purl.org/ontology/co/counterontology.html" rel="rdfs:seeAlso" href="http://motools.svn.sourceforge.net/viewvc/motools/dbtune/playcount/playcount.n3">Playcount Ontology</a> from 
-<a about="http://purl.org/ontology/co/counterontology.html" rel="rdfs:seeAlso" href="http://moustaki.org/">Yves Raimond</a>. The template of this specification is derived from the 
+<a href="http://moustaki.org/">Yves Raimond</a>. The template of this specification is derived from the 
 <a about="http://purl.org/ontology/co/counterontology.html" rel="rdfs:seeAlso" href="http://xmlns.com/foaf/spec/">FOAF Vocabulary
 Specification</a>, which was created by <a about="http://purl.org/ontology/co/counterontology.html" rel="rdfs:seeAlso" href="http://danbri.org/">Dan Brickley</a> and 
 <a about="http://purl.org/ontology/co/counterontology.html" rel="rdfs:seeAlso" href="http://nicecupoftea.org/">Libby Miller</a>. It was modified and extended by Bob Ferris. Furthermore,
@@ -121,7 +121,7 @@ was used to generate most of the RDFa statements of the Counter Ontology for thi
   <h2 id="glance">The Counter Ontology at a glance</h2>
 
 <div about="http://purl.org/ontology/co/core#" rel="rdfs:seeAlso">
-<img src="../gfx/co_-_Counter_graph.gif" title="The counter concept as graph with relations" alt="The counter concept as graph with relations" hspace="0px" />
+<img src="../gfx/co_-_Counter_graph.gif" title="The counter concept as graph with relations" alt="The counter concept as graph with relations" />
 The counter concept as graph with relations</div> 
  <p>An a-z index of Counter Ontology terms, by class (categories or types) and by property.</p>
  
@@ -243,13 +243,13 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
  <td>  <a href="#counter">counter</a>
 </td></tr> <tr><th>Sub class of</th>
  <td>  <span rel="rdfs:subClassOf" href="http://www.w3.org/2002/07/owl#Thing"><a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a></span>
- </td></tr><tr><th>Restriction</th>
- <td>  <span rel="rdfs:subClassOf" resource="[_:WvnmxbaZ3]"></span>
- <span about="[_:WvnmxbaZ3]" typeof="owl:Restriction"></span>The property 
-  									<span about="[_:WvnmxbaZ3]" rel="owl:onProperty" href="http://purl.org/ontology/co/core#count"><a href="#count">co:count</a></span> must be set <em>exactly</em> 
-  									<span about="[_:WvnmxbaZ3]" property="owl:cardinality" >1</span> time(s)
+ </td></tr><tr><th class="restrictions">Restriction(s):</th>
+ <td>  <span about ="http://purl.org/ontology/co/core#Counter" rel="rdfs:subClassOf" resource="[_:FHoFkAYd3]"></span>
+ <span about="[_:FHoFkAYd3]" typeof="owl:Restriction"></span>The property 
+  									<span about="[_:FHoFkAYd3]" rel="owl:onProperty" href="http://purl.org/ontology/co/core#count"><a href="#count">co:count</a></span> must be set <em>exactly</em> 
+  									<span about="[_:FHoFkAYd3]" property="owl:cardinality" >1</span> time(s) 
  </td></tr>
- <tr><td>  <span rel="rdfs:isDefinedBy" href="http://purl.org/ontology/co/core#" />
+ <tr><td>  <span rel="rdfs:isDefinedBy" href="http://purl.org/ontology/co/core#"></span>
  </td></tr><tr><th colspan="2">OWL Class</th>
  <td>  </td></tr><tr><th colspan="2">RDFS Class</th>
  <td> <span rel="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class"></span> </td></tr>
@@ -268,7 +268,7 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<tr><th>Sub class of</th>
  <td>  <span rel="rdfs:subClassOf" href="http://purl.org/NET/c4dm/event.owl#Event"><a href="http://purl.org/NET/c4dm/event.owl#Event">event:Event</a></span>
  </td></tr>
- <tr><td>  <span rel="rdfs:isDefinedBy" href="http://purl.org/ontology/co/core#" />
+ <tr><td>  <span rel="rdfs:isDefinedBy" href="http://purl.org/ontology/co/core#"></span>
  </td></tr><tr><th colspan="2">OWL Class</th>
  <td>  </td></tr><tr><th colspan="2">RDFS Class</th>
  <td> <span rel="rdf:type" href="http://www.w3.org/2000/01/rdf-schema#Class"></span> </td></tr>
@@ -289,7 +289,7 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<tr><th>Range:</th>
  <td>  <span rel="rdfs:range" href="http://www.w3.org/2001/XMLSchema#integer"><a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></span>
  </td></tr>
- <tr><td>  <span rel="rdfs:isDefinedBy" href="http://purl.org/ontology/co/core#" />
+ <tr><td>  <span rel="rdfs:isDefinedBy" href="http://purl.org/ontology/co/core#"></span>
  </td></tr><tr><th colspan="2">RDF Property</th>
  <td>  </td></tr><tr><th colspan="2">Functional Property</th>
  <td> <span rel="rdf:type" href="http://www.w3.org/2002/07/owl#FunctionalProperty"></span> </td></tr>
@@ -310,7 +310,7 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
  </td></tr><tr><th>Has inverse property</th>
  <td>  <a href="#object">has object</a>
  </td></tr>
- <tr><td>  <span rel="rdfs:isDefinedBy" href="http://purl.org/ontology/co/core#" />
+ <tr><td>  <span rel="rdfs:isDefinedBy" href="http://purl.org/ontology/co/core#"></span>
  </td></tr><tr><th colspan="2">RDF Property</th>
  <td>  </td></tr><tr><th colspan="2">Object Property</th>
  <td> <span rel="rdf:type" href="http://www.w3.org/2002/07/owl#ObjectProperty"></span> </td></tr>
@@ -332,7 +332,7 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
  </td></tr><tr><th>Inverse property of</th>
  <td>  <span rel="owl:inverseOf" href="http://purl.org/ontology/co/core#event_counter"><a href="#event_counter">has event counter</a></span>
  </td></tr>
- <tr><td>  <span rel="rdfs:isDefinedBy" href="http://purl.org/ontology/co/core#" />
+ <tr><td>  <span rel="rdfs:isDefinedBy" href="http://purl.org/ontology/co/core#"></span>
  </td></tr><tr><th colspan="2">RDF Property</th>
  <td>  </td></tr><tr><th colspan="2">Object Property</th>
  <td> <span rel="rdf:type" href="http://www.w3.org/2002/07/owl#ObjectProperty"></span> </td></tr>
@@ -353,7 +353,7 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
  </td></tr><tr><th>Inverse property of</th>
  <td>  <span rel="owl:inverseOf" href="http://purl.org/ontology/co/core#counter"><a href="#counter">has counter</a></span>
  </td></tr>
- <tr><td>  <span rel="rdfs:isDefinedBy" href="http://purl.org/ontology/co/core#" />
+ <tr><td>  <span rel="rdfs:isDefinedBy" href="http://purl.org/ontology/co/core#"></span>
  </td></tr><tr><th colspan="2">RDF Property</th>
  <td>  </td></tr><tr><th colspan="2">Object Property</th>
  <td> <span rel="rdf:type" href="http://www.w3.org/2002/07/owl#ObjectProperty"></span> </td></tr>
@@ -375,7 +375,7 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
  </td></tr><tr><th>Has inverse property</th>
  <td>  <a href="#event">has event</a>
  </td></tr>
- <tr><td>  <span rel="rdfs:isDefinedBy" href="http://purl.org/ontology/co/core#" />
+ <tr><td>  <span rel="rdfs:isDefinedBy" href="http://purl.org/ontology/co/core#"></span>
  </td></tr><tr><th colspan="2">RDF Property</th>
  <td>  </td></tr><tr><th colspan="2">Object Property</th>
  <td> <span rel="rdf:type" href="http://www.w3.org/2002/07/owl#ObjectProperty"></span> </td></tr>
