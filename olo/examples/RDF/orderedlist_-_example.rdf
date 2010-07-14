@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:bibo="http://purl.org/ontology/bibo/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:ex="http://example.org/"
+   xmlns:mo="http://purl.org/ontology/mo/"
+   xmlns:olo="http://purl.org/ontology/olo/core#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+   xml:base="http://example.org/">
+  <olo:OrderedList rdf:about="http://example.org/FunkyPlaylist">
+    <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A playlist full of funky legends</dc:description>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Funky Playlist</dc:title>
+    <olo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</olo:length>
+    <olo:slot>
+      <rdf:Description>
+        <olo:index rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</olo:index>
+        <olo:item rdf:resource="http://example.org/SexMachine"/>
+      </rdf:Description>
+    </olo:slot>
+    <olo:slot>
+      <rdf:Description>
+        <olo:index rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</olo:index>
+        <olo:item rdf:resource="http://example.org/GoodFoot"/>
+      </rdf:Description>
+    </olo:slot>
+  </olo:OrderedList>
+  <mo:Track rdf:about="http://example.org/GoodFoot">
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Good Foot</dc:title>
+  </mo:Track>
+  <mo:Track rdf:about="http://example.org/SexMachine">
+    <dc:creator rdf:resource="http://dbpedia.org/resource/James_Brown"/>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sex Machine</dc:title>
+  </mo:Track>
+  <bibo:Document rdf:about="http://example.org/orderedlist_-_example.n3">
+    <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-07-11T17:07:52+01:00</dc:date>
+    <dc:description xml:lang="en">This document includes an example of the ordered list concept of the Ordered List Ontology.</dc:description>
+    <dc:title xml:lang="en">Ordered List Example</dc:title>
+  </bibo:Document>
+</rdf:RDF>

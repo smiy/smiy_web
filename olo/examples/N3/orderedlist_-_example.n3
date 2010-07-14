@@ -1,0 +1,38 @@
+# Saved by TopBraid on Sun Jun 27 23:41:15 CEST 2010
+# baseURI: http://example.org/
+
+@prefix bibo:    <http://purl.org/ontology/bibo/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix olo:     <http://purl.org/ontology/olo/core#> .
+@prefix mo:		<http://purl.org/ontology/mo/> .
+@prefix ex:		<http://example.org/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://example.org/orderedlist_-_example.n3>
+      rdf:type bibo:Document ;
+      dc:creator <http://foaf.me/zazi#me> ;
+      dc:date "2010-07-11T17:07:52+01:00"^^xsd:dateTime ;
+      dc:description """This document includes an example of the ordered list concept of the Ordered List Ontology."""@en ;
+      dc:title "Ordered List Example"@en .
+
+ex:FunkyPlaylist a olo:OrderedList ;
+        dc:title "Funky Playlist"^^xsd:string ;
+        dc:description "A playlist full of funky legends"^^xsd:string ;
+        dc:creator <http://foaf.me/zazi#me> ;
+		olo:length 2 ;
+		olo:slot [   
+			olo:index 1 ;
+			olo:item ex:SexMachine
+		] ;
+		olo:slot [
+			olo:index 2 ;
+			olo:item ex:GoodFoot
+		] .
+
+ex:SexMachine a mo:Track ;
+	dc:title "Sex Machine"^^xsd:string ;
+	dc:creator <http://dbpedia.org/resource/James_Brown> .
+
+ex:GoodFoot a mo:Track ;
+	dc:title "Good Foot"^^xsd:string .	
