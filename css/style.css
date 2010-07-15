@@ -78,3 +78,17 @@ specterm.h3 {
 .restrictions {
 	vertical-align: top;	
 }
+
+.header {
+	width: 100%;
+}
+
+.infobox {
+	border:2px dashed #FFCC00; 
+	font-size:small; 
+	padding:10px;
+	width:400px;
+	height:140px;
+	text-align:right;
+	margin-right:20px;
+}
