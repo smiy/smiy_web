@@ -1,8 +1,9 @@
-# Saved by TopBraid on Tue Jul 20 16:11:40 CEST 2010
+# Saved by TopBraid on Thu Jul 22 23:35:07 CEST 2010
 # baseURI: http://purl.org/ontology/ao/core#
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://purl.org/ontology/similarity/
 # imports: http://www.w3.org/2003/06/sw-vocab-status/ns
+# imports: http://purl.org/stuff/rev
 # imports: http://purl.org/dc/terms/
 
 @prefix ao:      <http://purl.org/ontology/ao/core#> .
@@ -11,28 +12,30 @@
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rev:     <http://purl.org/stuff/rev#> .
 @prefix sim:     <http://purl.org/ontology/similarity/> .
 @prefix vs:      <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
 ao:   rdf:type owl:Ontology ;
       dc:creator <http://foaf.me/zazi#me> ;
-      dc:date "2010-07-20T14:44:52+01:00"^^xsd:dateTime ;
+      dc:date "2010-07-22T22:35:52+01:00"^^xsd:dateTime ;
       dc:description """The Association Ontology specification provides basic properties 
-for describing a associations to something, e.g. an occasion, a genre ar a mood 
-on/ for the Semantic Web. This document contains a RDF description of the Association Ontology."""@en ;
+for describing specific associations to something, e.g. an occasion, a genre or a mood, and enables furthermore, a mechanism to 
+like/rate and feedback these associations in context to something on/ for the Semantic Web. This document contains a RDF description 
+of the Association Ontology."""@en ;
       dc:title "The Association Ontology"@en ;
-      owl:imports dcterms: , dc: , <http://www.w3.org/2003/06/sw-vocab-status/ns> , sim: ;
-      owl:versionInfo 0.1 .
+      owl:imports dcterms: , <http://purl.org/stuff/rev> , dc: , <http://www.w3.org/2003/06/sw-vocab-status/ns> , sim: ;
+      owl:versionInfo 0.21 .
 
-ao:association
-      rdf:type owl:ObjectProperty ;
-      rdfs:comment "An association property to related associations to something, e.g. a association that includes an ao:mood, an ao:genre and an ao:occasion."^^xsd:string ;
-      rdfs:domain owl:Thing ;
-      rdfs:isDefinedBy ao: ;
-      rdfs:label "association"^^xsd:string ;
-      rdfs:range sim:Association ;
-      vs:term_status "testing"^^xsd:string .
+ao:LikeableAssociation
+      rdf:type owl:Class ;
+      rdfs:comment """A likeable association. That means this association type is intended to be used for voting (ao:likeminded), 
+feedbacking (rev:Feedback), reviewing (e.g. rev:rating) an association statement (related by ao:included_association) in the 
+context of something."""@en ;
+      rdfs:label "Likeable Association"@en ;
+      rdfs:subClassOf sim:Association , rev:Review ;
+      vs:term_status "testing"@en .
 
 ao:genre
       rdf:type rdf:Property ;
@@ -41,11 +44,21 @@ ao:genre
       rdfs:isDefinedBy ao: ;
       rdfs:label "has genre"@en ;
       rdfs:subPropertyOf dcterms:subject ;
-      owl:inverseOf
-              [ rdf:type rdf:Property ;
-                rdfs:label "is genre of"@en
-              ] ;
       vs:term_status "unstable"@en .
+
+ao:included_association
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment """This property could be used to compose association statements or to reuse them, e.g. to make them likeable 
+in a specific context."""@en ;
+      rdfs:domain sim:Association ;
+      rdfs:isDefinedBy ao: ;
+      rdfs:label "has included association"@en ;
+      rdfs:range sim:Association ;
+      owl:inverseOf
+              [ rdf:type owl:ObjectProperty ;
+                rdfs:label "is included association of"
+              ] ;
+      vs:term_status "testing"@en .
 
 ao:likeminded
       rdf:type owl:ObjectProperty ;
@@ -54,6 +67,10 @@ ao:likeminded
       rdfs:isDefinedBy ao: ;
       rdfs:label "has likeminded"^^xsd:string ;
       rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
+      owl:inverseOf
+              [ rdf:type owl:ObjectProperty ;
+                rdfs:label "is likeminded of"
+              ] ;
       vs:term_status "testing"^^xsd:string .
 
 ao:mood
@@ -63,10 +80,6 @@ ao:mood
       rdfs:isDefinedBy ao: ;
       rdfs:label "has mood"@en ;
       rdfs:subPropertyOf dcterms:subject ;
-      owl:inverseOf
-              [ rdf:type rdf:Property ;
-                rdfs:label "is mood of"@en
-              ] ;
       vs:term_status "unstable"@en .
 
 ao:occasion
@@ -76,8 +89,4 @@ ao:occasion
       rdfs:isDefinedBy ao: ;
       rdfs:label "has occassion"@en ;
       rdfs:subPropertyOf dcterms:subject ;
-      owl:inverseOf
-              [ rdf:type rdf:Property ;
-                rdfs:label "is occassion of"@en
-              ] ;
       vs:term_status "unstable"@en .
