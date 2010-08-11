@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE owl [
+     <!ENTITY ricardo-research-interests  "http://www.wici-lab.org/wici/e-foaf-interest/ricardo-research-interests.owl#" >
+     <!ENTITY owl  "http://www.w3.org/2002/07/owl#" >
+     <!ENTITY xsd  "http://www.w3.org/2001/XMLSchema#" >
+     <!ENTITY rdf  "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+     <!ENTITY foaf  "http://xmlns.com/foaf/spec/20100101.rdf#" >
+     <!ENTITY dc  "http://purl.org/dc/elements/1.1/" >
+         <!ENTITY e-foaf "http://www.wici-lab.org/wici/e-foaf/e-foaf.owl#" >
+   ]>
+
+<rdf:RDF
+  xmlns:dc = "http://purl.org/dc/elements/1.1/"
+  xmlns:owl = "http://www.w3.org/2002/07/owl#"
+  xmlns:rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs = "http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:xsd = "http://www.w3.org/2001/XMLSchema#"
+  xmlns:foaf = "http://xmlns.com/foaf/spec/20100101.rdf#"
+  xmlns:e-foaf = "http://www.wici-lab.org/wici/e-foaf/e-foaf.owl#">  
+
+  <foaf:Person rdf:about="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Baeza=Yates:Ricardo_A=.html">
+      <foaf:name>Ricardo Baeza-Yates</foaf:name>
+
+    <e-foaf:interest>
+            <rdf:Description rdf:about="http://www.wici-lab.org/wici/wiki/index.php/Web">
+    <dc:title>Web</dc:title>
+            <e-foaf:interest_appeared_in>
+    <rdf:Description rdf:about="http://dblp.uni-trier.de/rec/bibtex/conf/cikm/AlonsoGB09">
+     <e-foaf:interest_appear_time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-11-15T05:30:00+08:00</e-foaf:interest_appear_time>
+     </rdf:Description>
+    </e-foaf:interest_appeared_in>
+
+    <e-foaf:interest_co-occur_with>
+    <rdf:Description rdf:about="http://www.wici-lab.org/wici/wiki/index.php/Search">
+    <dc:title>Search</dc:title>
+    <e-foaf:interest_hasSynonym>
+     <rdf:Description rdf:about="http://www.wici-lab.org/wici/wiki/index.php/Retrieval">
+    <dc:title>Retrieval</dc:title>
+    </rdf:Description>
+    </e-foaf:interest_hasSynonym>
+    </rdf:Description>
+    </e-foaf:interest_co-occur_with>
+
+            <e-foaf:cumulative_interest_value rdf:parseType="Resource">
+                 <rdf:value rdf:datatype="http://www.w3.org/2001/XMLSchema#number">65</rdf:value>
+                 <e-foaf:interest_value_updatetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-12-22T23:30:00+08:00</e-foaf:interest_value_updatetime>
+            </e-foaf:cumulative_interest_value>
+
+        <e-foaf:retained_interest_value rdf:parseType="Resource">
+          <rdf:value rdf:datatype="http://www.w3.org/2001/XMLSchema#number">7.81</rdf:value>
+          <e-foaf:interest_value_updatetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-01-17T13:30:00+08:00</e-foaf:interest_value_updatetime>
+        </e-foaf:retained_interest_value>
+
+        <e-foaf:interest_longest_duration rdf:parseType="Resource">
+          <rdf:value rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">P9Y</rdf:value>
+          <e-foaf:interest_value_updatetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-01-17T05:30:00+08:00</e-foaf:interest_value_updatetime>
+        </e-foaf:interest_longest_duration>
+
+        <e-foaf:interest_cumulative_duration rdf:parseType="Resource">
+          <rdf:value rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">P10Y</rdf:value>
+          <e-foaf:interest_value_updatetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-01-10T03:15:00+08:00</e-foaf:interest_value_updatetime>
+          </e-foaf:interest_cumulative_duration>
+
+    </rdf:Description>
+ </e-foaf:interest>
+
+ </foaf:Person>
+
+</rdf:RDF>

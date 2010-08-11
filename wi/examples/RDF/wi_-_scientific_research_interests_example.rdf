@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:bibo="http://purl.org/ontology/bibo/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:ex="http://example.org/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:time="http://www.w3.org/2006/time#"
+   xmlns:tl="http://purl.org/NET/c4dm/timeline.owl#"
+   xmlns:wi="http://purl.org/ontology/wi/core#"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+   xml:base="http://example.org/">
+  <wi:InterestDynamics rdf:about="http://example.org/ASpecificContext">
+    <wi:appear_time>
+      <time:Instant>
+        <time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-11-15T05:30:00+08:00</time:inXSDDateTime>
+      </time:Instant>
+    </wi:appear_time>
+    <wi:temporal_context rdf:resource="http://dblp.uni-trier.de/rec/bibtex/conf/cikm/AlonsoGB09"/>
+  </wi:InterestDynamics>
+  <bibo:Document rdf:about="http://smiy.sourceforge.net/wi/examples/RDF/wi_-_scientific_research_interests_example.rdf">
+    <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-08-09T18:42:52+01:00</dc:date>
+    <dc:description xml:lang="en">This document includes a scientific research interests example based on the Weighted Interests Vocabulary.</dc:description>
+    <dc:title xml:lang="en">Scientific Research Interests Example</dc:title>
+    <rdfs:seeAlso rdf:resource="http://purl.org/ontology/wi/weightedinterests.n3"/>
+  </bibo:Document>
+  <foaf:Person rdf:about="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Baeza=Yates:Ricardo_A=.html">
+    <wi:preference rdf:resource="http://example.org/WebInterest"/>
+    <foaf:name>Ricardo Baeza-Yates</foaf:name>
+    <foaf:topic_interest rdf:resource="http://www.wici-lab.org/wici/wiki/index.php/Web"/>
+  </foaf:Person>
+  <wi:Weight>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-12-22T23:30:00+08:00</dcterms:modified>
+    <rdf:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65.0</rdf:value>
+  </wi:Weight>
+  <tl:UTInterval>
+    <tl:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">P10Y</tl:duration>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-01-10T03:15:00+08:00</dcterms:modified>
+  </tl:UTInterval>
+  <tl:UTInterval>
+    <tl:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">P9Y</tl:duration>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-01-17T05:30:00+08:00</dcterms:modified>
+  </tl:UTInterval>
+</rdf:RDF>

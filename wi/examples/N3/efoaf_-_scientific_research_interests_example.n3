@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix efoaf: <http://www.wici-lab.org/wici/e-foaf/e-foaf.owl#> .
+
+<http://dblp.uni-trier.de/rec/bibtex/conf/cikm/AlonsoGB09>
+    efoaf:interest_appear_time "2009-11-15T05:30:00+08:00"^^xsd:dateTime .
+
+<http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Baeza=Yates:Ricardo_A=.html>
+    a foaf:Person ;
+    efoaf:interest <http://www.wici-lab.org/wici/wiki/index.php/Web> ;
+    foaf:name "Ricardo Baeza-Yates" .
+
+<http://www.wici-lab.org/wici/wiki/index.php/Retrieval>
+    dc:title "Retrieval" .
+
+<http://www.wici-lab.org/wici/wiki/index.php/Search>
+    dc:title "Search" ;
+    efoaf:interest_hasSynonym <http://www.wici-lab.org/wici/wiki/index.php/Retrieval> .
+
+<http://www.wici-lab.org/wici/wiki/index.php/Web>
+    dc:title "Web" ;
+    efoaf:cumulative_interest_value [
+        rdf:value "65"^^xsd:number ;
+        efoaf:interest_value_updatetime "2009-12-22T23:30:00+08:00"^^xsd:dateTime
+    ] ;
+    efoaf:interest_appeared_in <http://dblp.uni-trier.de/rec/bibtex/conf/cikm/AlonsoGB09> ;
+    efoaf:interest_co-occur_with <http://www.wici-lab.org/wici/wiki/index.php/Search> ;
+    efoaf:interest_cumulative_duration [
+        rdf:value "P10Y"^^xsd:duration ;
+        efoaf:interest_value_updatetime "2010-01-10T03:15:00+08:00"^^xsd:dateTime
+    ] ;
+    efoaf:interest_longest_duration [
+        rdf:value "P9Y"^^xsd:duration ;
+        efoaf:interest_value_updatetime "2010-01-17T05:30:00+08:00"^^xsd:dateTime
+    ] ;
+    efoaf:retained_interest_value [
+        rdf:value "7.81"^^xsd:number ;
+        efoaf:interest_value_updatetime "2010-01-17T13:30:00+08:00"^^xsd:dateTime
+    ] .
+
