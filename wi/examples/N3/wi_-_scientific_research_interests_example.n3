@@ -17,7 +17,7 @@
       dc:creator <http://foaf.me/zazi#me> ;
       dc:date "2010-08-09T18:42:52+01:00"^^xsd:dateTime ;
       dc:description """This document includes a scientific research interests example based on the Weighted Interests Vocabulary."""@en ;
-      rdfs:seeAlso <http://purl.org/ontology/wi/weightedinterests.n3> ;
+      rdfs:seeAlso <http://purl.org/ontology/wi/core#> ;
       dc:title "Scientific Research Interests Example"@en .
 
 ex:ASpecificContext a wi:InterestDynamics ;
@@ -34,7 +34,8 @@ ex:ASpecificContext a wi:InterestDynamics ;
 ex:WebInterest a wi:ComplexInterest ;
 	wi:topic	<http://www.wici-lab.org/wici/wiki/index.php/Web> ;
     wi:overall_weight [ a wi:Weight ;
-        rdf:value 65.0 ;
+        wi:weight_value 65.0 ;
+        wi:scale ex:AScale ;
         dcterms:modified "2009-12-22T23:30:00+08:00"^^xsd:dateTime
     ] ;
     wi:context <http://dblp.uni-trier.de/rec/bibtex/conf/cikm/AlonsoGB09> ;
@@ -46,8 +47,19 @@ ex:WebInterest a wi:ComplexInterest ;
         tl:duration "P9Y"^^xsd:duration ;
         dcterms:modified "2010-01-17T05:30:00+08:00"^^xsd:dateTime
     ] ;
-    wi:weight [ a wi:Weight
-        rdf:value 7.81 ;
+    wi:weight [ a wi:Weight ;
+        wi:weight_value 7.81 ;
+        wi:scale ex:AnotherScale ;
         dcterms:modified "2010-01-17T13:30:00+08:00"^^xsd:dateTime
     ] .
+    
+ex:AScale a wi:Scale ;
+	wi:min_weight 0.0 ;
+	wi:max_weight 100 ;
+	wi:step_size 5.0 .
+	
+ex:AnotherScale a wi:Scale ;
+	wi:min_weight 0.0 ;
+	wi:max_weight 10.0 ;
+	wi:step_size 0.01 .
 
