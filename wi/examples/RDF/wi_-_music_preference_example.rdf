@@ -11,13 +11,14 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:tl="http://perl.org/NET/c4dm/timeline.owl#"
    xmlns:wi="http://purl.org/ontology/wi/core#"
+   xmlns:wo="http://purl.org/ontology/wo/core#"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
    xml:base="http://example.org/">
-  <wi:Scale rdf:about="http://example.org/AScale">
-    <wi:max_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</wi:max_weight>
-    <wi:min_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</wi:min_weight>
-    <wi:step_size rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</wi:step_size>
-  </wi:Scale>
+  <wo:Scale rdf:about="http://example.org/AScale">
+    <wo:max_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</wo:max_weight>
+    <wo:min_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</wo:min_weight>
+    <wo:step_size rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</wo:step_size>
+  </wo:Scale>
   <wi:InterestDynamics rdf:about="http://example.org/BigFan">
     <wi:appear_time>
       <tl:UTInterval>
@@ -25,64 +26,52 @@
         <tl:end rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-10-21T00:00:00+01:00</tl:end>
       </tl:UTInterval>
     </wi:appear_time>
-    <wi:temporal_weight>
-      <wi:Weight>
-        <wi:scale rdf:resource="http://example.org/AScale"/>
-        <wi:weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</wi:weight_value>
-      </wi:Weight>
-    </wi:temporal_weight>
+    <wo:scale rdf:resource="http://example.org/AScale"/>
+    <wo:weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</wo:weight_value>
   </wi:InterestDynamics>
-  <wi:Context rdf:about="http://example.org/Party">
-    <wi:time_period>
-      <days:FridayInterval>
-        <tl:at rdf:datatype="http://www.w3.org/2001/XMLSchema#time">23:00:00</tl:at>
-        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-03-21T18:40:00+01:00</dcterms:modified>
-      </days:FridayInterval>
-    </wi:time_period>
-  </wi:Context>
   <wi:InterestDynamics rdf:about="http://example.org/TechnoParty">
     <event:place rdf:resource="http://dbpedia.org/resource/Tresor"/>
+    <dcterms:subject rdf:resource="http://www.residentadvisor.net/event.aspx?151690"/>
     <wi:appear_time>
       <tl:UTInterval>
         <tl:at rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-04-03T23:30:00+01:00</tl:at>
         <tl:end rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-04-04T05:30:00+01:00</tl:end>
       </tl:UTInterval>
     </wi:appear_time>
-    <wi:temporal_context rdf:resource="http://www.residentadvisor.net/event.aspx?151690"/>
-    <wi:temporal_weight>
-      <wi:Weight>
-        <wi:scale rdf:resource="http://example.org/AScale"/>
-        <wi:weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</wi:weight_value>
-      </wi:Weight>
-    </wi:temporal_weight>
+    <wo:scale rdf:resource="http://example.org/AScale"/>
+    <wo:weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</wo:weight_value>
   </wi:InterestDynamics>
-  <wi:Context rdf:about="http://example.org/Working">
-    <wi:time_period>
-      <days:WeekdayInterval>
-        <tl:at rdf:datatype="http://www.w3.org/2001/XMLSchema#time">08:00:00</tl:at>
-        <tl:end rdf:datatype="http://www.w3.org/2001/XMLSchema#time">19:00:00</tl:end>
-        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-12-14T10:01:00+01:00</dcterms:modified>
-      </days:WeekdayInterval>
-    </wi:time_period>
-  </wi:Context>
   <foaf:Person rdf:about="http://foaf.me/zazi#me">
     <wi:not_interested_in rdf:resource="http://dbpedia.org/resource/Category:German_folk_music"/>
     <wi:not_interested_in rdf:resource="http://dbpedia.org/resource/Category:Schlager"/>
     <wi:preference>
       <wi:WeightedInterest>
-        <wi:context rdf:resource="http://example.org/Working"/>
+        <wi:appear_time>
+          <days:WeekdayInterval>
+            <tl:at rdf:datatype="http://www.w3.org/2001/XMLSchema#time">08:00:00</tl:at>
+            <tl:end rdf:datatype="http://www.w3.org/2001/XMLSchema#time">19:00:00</tl:end>
+            <dc:title>working time</dc:title>
+            <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-12-14T10:01:00+01:00</dcterms:modified>
+          </days:WeekdayInterval>
+        </wi:appear_time>
         <wi:topic rdf:resource="http://dbtune.org/musicbrainz/resource/artist/20ff3303-4fe2-4a47-a1b6-291e26aa3438"/>
-        <wi:weight>
-          <wi:Weight>
-            <wi:scale rdf:resource="http://example.org/AScale"/>
-            <wi:weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</wi:weight_value>
-          </wi:Weight>
-        </wi:weight>
+        <wo:weight>
+          <wo:Weight>
+            <wo:scale rdf:resource="http://example.org/AScale"/>
+            <wo:weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</wo:weight_value>
+          </wo:Weight>
+        </wo:weight>
       </wi:WeightedInterest>
     </wi:preference>
     <wi:preference>
-      <wi:ComplexInterest>
-        <wi:context rdf:resource="http://example.org/Party"/>
+      <wi:WeightedInterest>
+        <wi:appear_time>
+          <days:FridayInterval>
+            <tl:at rdf:datatype="http://www.w3.org/2001/XMLSchema#time">23:00:00</tl:at>
+            <dc:title>party time</dc:title>
+            <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-03-21T18:40:00+01:00</dcterms:modified>
+          </days:FridayInterval>
+        </wi:appear_time>
         <wi:interest_dynamics rdf:resource="http://example.org/BigFan"/>
         <wi:interest_dynamics rdf:resource="http://example.org/TechnoParty"/>
         <wi:longest_duration>
@@ -94,11 +83,11 @@
           </tl:UTInterval>
         </wi:longest_duration>
         <wi:overall_weight>
-          <wi:Weight>
+          <wo:Weight>
             <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-07-02T22:20:00+01:00</dcterms:modified>
-            <wi:scale rdf:resource="http://example.org/AScale"/>
-            <wi:weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</wi:weight_value>
-          </wi:Weight>
+            <wo:scale rdf:resource="http://example.org/AScale"/>
+            <wo:weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</wo:weight_value>
+          </wo:Weight>
         </wi:overall_weight>
         <wi:topic rdf:resource="http://dbtune.org/musicbrainz/resource/artist/470a4ced-1323-4c91-8fd5-0bb3fb4c932a"/>
         <wi:ultimative_duration>
@@ -107,14 +96,14 @@
             <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-08-14T17:25:00+01:00</dcterms:modified>
           </tl:UTInterval>
         </wi:ultimative_duration>
-        <wi:weight>
-          <wi:Weight>
+        <wo:weight>
+          <wo:Weight>
             <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-06-18T09:34:00+01:00</dcterms:modified>
-            <wi:scale rdf:resource="http://example.org/AScale"/>
-            <wi:weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</wi:weight_value>
-          </wi:Weight>
-        </wi:weight>
-      </wi:ComplexInterest>
+            <wo:scale rdf:resource="http://example.org/AScale"/>
+            <wo:weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</wo:weight_value>
+          </wo:Weight>
+        </wo:weight>
+      </wi:WeightedInterest>
     </wi:preference>
     <foaf:name>Bob Ferris</foaf:name>
   </foaf:Person>

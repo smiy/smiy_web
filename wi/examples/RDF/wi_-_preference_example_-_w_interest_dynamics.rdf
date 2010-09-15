@@ -11,13 +11,14 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:tl="http://perl.org/NET/c4dm/timeline.owl#"
    xmlns:wi="http://purl.org/ontology/wi/core#"
+   xmlns:wo="http://purl.org/ontology/wo/core#"
    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
    xml:base="http://example.org/">
-  <wi:Scale rdf:about="http://example.org/AScale">
-    <wi:max_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</wi:max_weight>
-    <wi:min_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</wi:min_weight>
-    <wi:step_size rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</wi:step_size>
-  </wi:Scale>
+  <wo:Scale rdf:about="http://example.org/AScale">
+    <wo:max_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</wo:max_weight>
+    <wo:min_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</wo:min_weight>
+    <wo:step_size rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</wo:step_size>
+  </wo:Scale>
   <geo:Point rdf:about="http://example.org/MyWorkingPlace"/>
   <wi:InterestDynamics rdf:about="http://example.org/Working">
     <event:place rdf:resource="http://example.org/MyWorkingPlace"/>
@@ -27,12 +28,8 @@
         <tl:end rdf:datatype="http://www.w3.org/2001/XMLSchema#time">19:00:00</tl:end>
       </days:WeekdayInterval>
     </wi:appear_time>
-    <wi:temporal_weight>
-      <wi:Weight>
-        <wi:scale rdf:resource="http://example.org/AScale"/>
-        <wi:weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</wi:weight_value>
-      </wi:Weight>
-    </wi:temporal_weight>
+    <wi:scale rdf:resource="http://example.org/AScale"/>
+    <wi:weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</wi:weight_value>
   </wi:InterestDynamics>
   <bibo:Document rdf:about="http://smiy.sourceforge.net/wi/examples/RDF/wi_-_preference_example_-_w_interest_dynamics.rdf">
     <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
@@ -43,34 +40,34 @@
   </bibo:Document>
   <foaf:Person rdf:about="http://swordfish.rdfweb.org/people/libby/rdfweb/webwho.xrdf#me">
     <wi:preference>
-      <wi:ComplexInterest>
+      <wi:WeightedInterest>
         <wi:interest_dynamics rdf:resource="http://example.org/Working"/>
         <wi:topic rdf:resource="http://www.bbc.co.uk/5live#service"/>
-        <wi:weight>
-          <wi:Weight>
-            <wi:scale rdf:resource="http://example.org/AScale"/>
-            <wi:weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</wi:weight_value>
-          </wi:Weight>
-        </wi:weight>
-      </wi:ComplexInterest>
+        <wo:weight>
+          <wo:Weight>
+            <wo:scale rdf:resource="http://example.org/AScale"/>
+            <wo:weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</wo:weight_value>
+          </wo:Weight>
+        </wo:weight>
+      </wi:WeightedInterest>
     </wi:preference>
     <wi:preference>
-      <wi:ComplexInterest>
+      <wi:WeightedInterest>
         <wi:interest_dynamics rdf:resource="http://example.org/Working"/>
         <wi:overall_weight>
-          <wi:Weight>
-            <wi:scale rdf:resource="http://example.org/AScale"/>
-            <wi:weight_scale rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</wi:weight_scale>
-          </wi:Weight>
+          <wo:Weight>
+            <wo:scale rdf:resource="http://example.org/AScale"/>
+            <wo:weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</wo:weight_value>
+          </wo:Weight>
         </wi:overall_weight>
         <wi:topic rdf:resource="http://www.bbc.co.uk/radio4#service"/>
-        <wi:weight>
-          <wi:Weight>
-            <wi:scale rdf:resource="http://example.org/AScale"/>
-            <wi:weight_scale rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</wi:weight_scale>
-          </wi:Weight>
-        </wi:weight>
-      </wi:ComplexInterest>
+        <wo:weight>
+          <wo:Weight>
+            <wo:scale rdf:resource="http://example.org/AScale"/>
+            <wo:weight_scale rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</wo:weight_scale>
+          </wo:Weight>
+        </wo:weight>
+      </wi:WeightedInterest>
     </wi:preference>
     <foaf:name>Libby Miller</foaf:name>
   </foaf:Person>

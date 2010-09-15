@@ -2,6 +2,7 @@
 
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix wi:      <http://purl.org/ontology/wi/core#> .
+@prefix wo:      <http://purl.org/ontology/wo/core#> .
 @prefix bibo:    <http://purl.org/ontology/bibo/> .
 @prefix days: <http://ontologi.es/days#> .
 @prefix tl: <http://perl.org/NET/c4dm/timeline.owl#> .
@@ -25,32 +26,35 @@
 	a foaf:Person ;
 	foaf:name "Libby Miller" ;
 	wi:preference [
-		a wi:ComplexInterest ;
+		a wi:WeightedInterest ;
 		wi:topic <http://www.bbc.co.uk/5live#service> ;
-		wi:weight [ a wi:Weight ;
-      		wi:weight_value 3.0 ;
-      		wi:scale ex:AScale ;
+		wo:weight [ 
+			a wo:Weight ;
+      		wo:weight_value 3.0 ;
+      		wo:scale ex:AScale 
       		] ;
 		wi:interest_dynamics ex:Working
 		] ;
 	wi:preference [
-		a wi:ComplexInterest ;
+		a wi:WeightedInterest ;
 		wi:topic <http://www.bbc.co.uk/radio4#service> ;
-		wi:overall_weight [ a wi:Weight ;
-			wi:weight_scale 7.0 ;
-			wi:scale ex:AScale ;
+		wi:overall_weight [ 
+			a wo:Weight ;
+			wo:weight_value 7.0 ;
+			wo:scale ex:AScale 
 			] ;
-		wi:weight [ a wi:Weight ;
-			wi:weight_scale 5.0 ;
-			wi:scale ex:AScale ;
+		wo:weight [ 
+			a wo:Weight ;
+			wo:weight_scale 5.0 ;
+			wo:scale ex:AScale 
 			] ;
 		wi:interest_dynamics ex:Working
       	] .
 
-ex:AScale a wi:Scale ;
-	wi:min_weight 0.0 ;
-	wi:max_weight 9.0 ;
-	wi:step_size 1.0 .      
+ex:AScale a wo:Scale ;
+	wo:min_weight 0.0 ;
+	wo:max_weight 9.0 ;
+	wo:step_size 1.0 .      
       
 ex:Working a wi:InterestDynamics ;
 	wi:appear_time [
@@ -58,10 +62,8 @@ ex:Working a wi:InterestDynamics ;
 		tl:at "08:00:00"^^xsd:time ;
 		tl:end "19:00:00"^^xsd:time 
 		] ;
-	wi:temporal_weight [ a wi:Weight ;
-		wi:weight_value 9.0 ;
-		wi:scale ex:AScale	
-		] ;
+	wi:weight_value 9.0 ;
+	wi:scale ex:AScale ;
 	event:place ex:MyWorkingPlace .
 	
 ex:MyWorkingPlace a geo:Point .

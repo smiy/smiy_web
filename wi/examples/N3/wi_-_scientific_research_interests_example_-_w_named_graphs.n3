@@ -8,7 +8,6 @@
 @prefix tl:		<http://purl.org/NET/c4dm/timeline.owl#> .
 @prefix dcterms:	<http://purl.org/dc/terms/> .
 @prefix wi:      <http://purl.org/ontology/wi/core#> .
-@prefix wo:      <http://purl.org/ontology/wo/core#> .
 @prefix bibo:    <http://purl.org/ontology/bibo/> .
 @prefix ex:		<http://example.org/> .
 @prefix time:	<http://www.w3.org/2006/time#> .
@@ -22,11 +21,9 @@
       dc:title "Scientific Research Interests Example"@en .
 
 ex:ASpecificContext a wi:InterestDynamics ;
-	dcterms:subject <http://dblp.uni-trier.de/rec/bibtex/conf/cikm/AlonsoGB09> ;
-    wi:appear_time [ 
-    	a time:UTInstant ;
-    	time:inXSDDateTime "2009-11-15T05:30:00+08:00"^^xsd:dateTime 
-    	] .
+	wi:temporal_context <http://dblp.uni-trier.de/rec/bibtex/conf/cikm/AlonsoGB09> ;
+    wi:appear_time [ a time:UTInstant ;
+    	time:inXSDDateTime "2009-11-15T05:30:00+08:00"^^xsd:dateTime ] .
 
 <http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Baeza=Yates:Ricardo_A=.html>
     a foaf:Person ;
@@ -34,38 +31,34 @@ ex:ASpecificContext a wi:InterestDynamics ;
     wi:preference ex:WebInterest ;
     foaf:name "Ricardo Baeza-Yates" .
 
-ex:WebInterest a wi:WeightedInterest ;
+ex:WebInterest a wi:ComplexInterest ;
 	wi:topic	<http://www.wici-lab.org/wici/wiki/index.php/Web> ;
-    wi:overall_weight [ 
-    	a wo:Weight ;
-        wo:weight_value 65.0 ;
-        wo:scale ex:AScale ;
-        dcterms:modified "2009-12-22T23:30:00+08:00"^^xsd:dateTime
-    ] ;
-    wi:interest_dynamics ex:ASpecificContext ;
-    wi:ultimative_duration [ 
-    	a tl:UTInterval ;
-        tl:duration "P10Y"^^xsd:duration ;
-        dcterms:modified "2010-01-10T03:15:00+08:00"^^xsd:dateTime
-    ] ;
-    wi:longest_duration [ 
-    	a tl:UTInterval ;
-        tl:duration "P9Y"^^xsd:duration ;
-        dcterms:modified "2010-01-17T05:30:00+08:00"^^xsd:dateTime
-    ] ;
-    wo:weight [ 
-    	a wo:Weight ;
-        wo:weight_value 7.81 ;
-        wo:scale ex:AnotherScale ;
-        dcterms:modified "2010-01-17T13:30:00+08:00"^^xsd:dateTime
-    ] .
+    wi:context <http://dblp.uni-trier.de/rec/bibtex/conf/cikm/AlonsoGB09> .
     
-ex:AScale a wo:Scale ;
-	wo:min_weight 0.0 ;
-	wo:max_weight 100 ;
-	wo:step_size 5.0 .
+ex:G1 { ex:WebInterest wi:overall_weight 65.0 . } .
+ex:G1  wi:scale ex:AScale ;
+       dcterms:modified "2009-12-22T23:30:00+08:00"^^xsd:dateTime .
+   
+ex:G2 { ex:WebInterest wi:ultimative_duration [ 
+			a tl:UTInterval ;
+        	tl:duration "P10Y"^^xsd:duration ] . } .
+ex:G2 dcterms:modified "2010-01-10T03:15:00+08:00"^^xsd:dateTime .
+
+ex:G3 { ex:WebInterest wi:longest_duration [ 
+			a tl:UTInterval ;
+        	tl:duration "P9Y"^^xsd:duration ] . } .
+ex:G3 dcterms:modified "2010-01-17T05:30:00+08:00"^^xsd:dateTime .
+    
+ex:G4 { ex:WebInterest wi:weight 7.81 . } .
+ex:G4 wi:scale ex:AnotherScale ;
+      dcterms:modified "2010-01-17T13:30:00+08:00"^^xsd:dateTime .
+    
+ex:AScale a wi:Scale ;
+	wi:min_weight 0.0 ;
+	wi:max_weight 100 ;
+	wi:step_size 5.0 .
 	
-ex:AnotherScale a wo:Scale ;
-	wo:min_weight 0.0 ;
-	wo:max_weight 10.0 ;
-	wo:step_size 0.01 .
+ex:AnotherScale a wi:Scale ;
+	wi:min_weight 0.0 ;
+	wi:max_weight 10.0 ;
+	wi:step_size 0.01 .
