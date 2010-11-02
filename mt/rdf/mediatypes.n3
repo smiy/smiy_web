@@ -1,0 +1,721 @@
+# Saved by TopBraid on Thu Oct 28 20:19:01 CEST 2010
+# baseURI: http://purl.org/ontology/mt/
+
+@prefix dbpedia:  <http://dbpedia.org/resource/> .
+@prefix dbpediacat:  <http://dbpedia.org/resource/Category:> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix is:      <http://purl.org/ontology/is/core#> .
+@prefix isi:     <http://purl.org/ontology/is/inst/> .
+@prefix mt:      <http://purl.org/ontology/mt/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+mt:   rdf:type skos:ConceptScheme ;
+      dc:creator <http://foaf.me/zazi#me> , <http://kurtisrandom.com/foaf.rdf#kurtjx> ;
+      dc:date "2010-10-27T15:19:51+01:00"^^xsd:dateTime ;
+      dc:description "This document includes currently some dcterms:MediaType individuals."@en ;
+      dc:title "Media Types"@en .
+
+mt:AAC
+      rdf:type dcterms:FileFormat , skos:Concept ;
+      rdfs:seeAlso dbpedia:Advanced_Audio_Coding ;
+      dc:description "Advanced Audio Coding used as medium to record an audio manifestation."@en ;
+      dc:title "AAC"^^xsd:string ;
+      dcterms:created "1997"^^xsd:gYear ;
+      skos:altLabel "Advanced Audio Coding"^^xsd:string ;
+      skos:broader mt:AudioFile ;
+      skos:inScheme mt: ;
+      skos:prefLabel "AAC"^^xsd:string .
+      
+dbpedia:Advanced_Audio_Coding
+      is:info_service isi:dbpedia .
+
+mt:AIFF
+      rdf:type dcterms:FileFormat , skos:Concept ;
+      rdfs:seeAlso dbpedia:Audio_Interchange_File_Format ;
+      dc:description "Audio Interchange File Format used as medium to record an audio manifestation."@en ;
+      dc:title "AIFF"^^xsd:string ;
+      dcterms:created "1988"^^xsd:gYear ;
+      skos:altLabel "Audio Interchange File Format"^^xsd:string ;
+      skos:broader mt:AudioFile ;
+      skos:inScheme mt: ;
+      skos:prefLabel "AIFF"^^xsd:string .
+      
+dbpedia:Audio_Interchange_File_Format
+      is:info_service isi:dppedia .
+
+mt:Audio
+      rdf:type skos:Concept , dcterms:MediaType ;
+      rdfs:seeAlso <http://dbpedia.org/resource/Category:Audio_storage> ;
+      dc:description "Audio used as medium to record an audio manifestation."@en ;
+      dc:title "audio"^^xsd:string ;
+      skos:inScheme mt: ;
+      skos:prefLabel "audio"^^xsd:string .
+      
+<http://dbpedia.org/resource/Category:Audio_storage>
+      is:info_service isi:dbpedia .
+
+mt:AudioFile
+      rdf:type dcterms:MediaType , skos:Concept ;
+      rdfs:seeAlso dbpedia:Audio_file_format ;
+      dc:description "An audio file, which may be available on a local file system or through http, ftp, etc., used as medium to record an audio manifestation."@en ;
+      dc:title "audio file"^^xsd:string ;
+      skos:broader mt:DigitalMedia , mt:Audio ;
+      skos:inScheme mt: ;
+      skos:prefLabel "audio file"^^xsd:string .
+      
+dbpedia:Audio_file_format
+      is:info_service isi:dbpedia .
+
+mt:Betamax
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      rdfs:seeAlso dbpedia:Betamax ;
+      dc:description "Betamax used as medium to record a video (and audio) manifestation."@en ;
+      dc:title "Betamax"^^xsd:string ;
+      dcterms:created "1975"^^xsd:gYear ;
+      skos:broader mt:Cassette , mt:Video ;
+      skos:inScheme mt: ;
+      skos:prefLabel "Betamax"^^xsd:string .
+      
+dbpedia:Betamax
+      is:info_service isi:dbpedia .
+
+mt:BluRayDisc
+      rdf:type skos:Concept , dcterms:PhysicalMedium ;
+      rdfs:seeAlso dbpedia:Blu-ray_Disc ;
+      dc:description "Blu-ray Disc used as medium to record an audio and/or video manifestation."@en ;
+      dc:title "Blu-ray Disc"^^xsd:string ;
+      dcterms:created "2006"^^xsd:gYear ;
+      skos:broader mt:Video , mt:OpticalDisc ;
+      skos:inScheme mt: ;
+      skos:prefLabel "Blu-ray Disc"^^xsd:string .
+      
+dbpedia:Blu-ray_Disc
+      is:info_service isi:dbpedia .
+
+mt:Broadcast
+      rdf:type skos:Concept , dcterms:MediaType ;
+      rdfs:seeAlso <http://dbpedia.org/resource/Category:Broadcasting> ;
+      dc:description "The distribution of audio and/or video content to a dispersed audience. Broadcast used as medium to distribute audio and/or video manifestations."@en ;
+      dc:title "broadcast"^^xsd:string ;
+      skos:inScheme mt: ;
+      skos:prefLabel "broadcast"^^xsd:string .
+      
+<http://dbpedia.org/resource/Category:Broadcasting>
+      is:info_service isi:dbpedia .
+
+mt:CD
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      rdfs:seeAlso dbpedia:Compact_Disc ;
+      dc:description "Compact Disc used as medium to record an audio manifestation."@en ;
+      dc:title "CD"^^xsd:string ;
+      dcterms:created "1982"^^xsd:gYear ;
+      skos:altLabel "Compact Disc"^^xsd:string ;
+      skos:broader mt:OpticalDisc ;
+      skos:inScheme mt: ;
+      skos:prefLabel "CD"^^xsd:string .
+      
+dbpedia:Compact_Disc
+      is:info_service isi:dbpedia .
+
+mt:Cartridge
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      dc:description "Cartridge used as medium to record an audio manifestation."@en ;
+      dc:title "cartridge"^^xsd:string ;
+      dcterms:created "1952"^^xsd:gYear ;
+      skos:broader mt:Audio , mt:MagneticTape ;
+      skos:inScheme mt: ;
+      skos:prefLabel "cartridge"^^xsd:string .
+
+mt:Cassette
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      dc:description "Cassette used as medium to record an audio and/or video manifestation."@en ;
+      dc:title "Cassette"^^xsd:string ;
+      dcterms:created "1964"^^xsd:gYear ;
+      skos:broader mt:MagneticTape ;
+      skos:inScheme mt: ;
+      skos:prefLabel "Cassette"^^xsd:string .
+
+mt:CompactCassette
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      rdfs:seeAlso dbpedia:Compact_Cassette ;
+      dc:description "Compact Cassette used as medium to record an audio and manifestation."@en ;
+      dc:title "Compact Cassette"^^xsd:string ;
+      dcterms:created "1964"^^xsd:gYear ;
+      skos:altLabel "cassette"^^xsd:string , "audio cassette"^^xsd:string , "tape"^^xsd:string , "cassette tape"^^xsd:string ;
+      skos:broader mt:Cassette , mt:Audio ;
+      skos:inScheme mt: ;
+      skos:prefLabel "Compact Cassette"^^xsd:string .
+      
+dbpedia:Compact_Cassette
+      is:info_service isi:dbpedia .
+
+mt:DAT
+      rdf:type skos:Concept , dcterms:PhysicalMedium ;
+      rdfs:seeAlso dbpedia:Digital_Audio_Tape ;
+      dc:description "Digital Audio Tape used as medium to record an audio manifestation."@en ;
+      dc:title "DAT"^^xsd:string ;
+      dcterms:created "1976"^^xsd:gYear ;
+      skos:altLabel "Digital Audio Tape"^^xsd:string ;
+      skos:broader mt:Audio , mt:Cassette ;
+      skos:inScheme mt: ;
+      skos:prefLabel "DAT"^^xsd:string .
+      
+dbpedia:Digital_Audio_Tape
+      is:info_service isi:dbpedia .
+
+mt:DCC
+      rdf:type skos:Concept , dcterms:PhysicalMedium ;
+      rdfs:seeAlso dbpedia:Digital_Compact_Cassette ;
+      dc:description "Digital Compact Cassette used as medium to record an audio manifestation."@en ;
+      dc:title "DCC"^^xsd:string ;
+      dcterms:created "1992"^^xsd:gYear ;
+      skos:altLabel "Digital Compact Cassette"^^xsd:string ;
+      skos:broader mt:Cassette , mt:Audio ;
+      skos:inScheme mt: ;
+      skos:prefLabel "DCC"^^xsd:string .
+      
+dbpedia:Digital_Compact_Cassette
+      is:info_service isi:dbpedia .
+
+mt:DVD
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      rdfs:seeAlso dbpedia:DVD ;
+      dc:description "Digital Versatile Disc used as medium to record an audio and/or video manifestation."@en ;
+      dc:title "DVD"^^xsd:string ;
+      dcterms:created "1995"^^xsd:gYear ;
+      skos:altLabel "Digital Versatile Disc"^^xsd:string ;
+      skos:broader mt:OpticalDisc ;
+      skos:inScheme mt: ;
+      skos:prefLabel "DVD"^^xsd:string .
+      
+dbpedia:DVD
+      is:info_service isi:dbpedia .
+
+mt:DVDAudio
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      rdfs:seeAlso dbpedia:DVD-Audio ;
+      dc:description "DVD-Audio used as medium to record an audio manifestation."@en ;
+      dc:title "DVD-Audio"^^xsd:gYear ;
+      skos:broader mt:Audio , mt:DVD ;
+      skos:inScheme mt: ;
+      skos:prefLabel "DVD-Audio"^^xsd:string .
+      
+dbpedia:DVD-Audio
+      is:info_service isi:dbpedia .
+
+mt:DVDVideo
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      rdfs:seeAlso dbpedia:DVD-Video ;
+      dc:description "DVD-Video used as medium to record a video (and audio) manifestation."@en ;
+      dc:title "DVD-Video"^^xsd:string ;
+      skos:broader mt:Video , mt:DVD ;
+      skos:inScheme mt: ;
+      skos:prefLabel "DVD-Video"^^xsd:string .
+      
+dbpedia:DVD-Video
+      is:info_service isi:dbpedia .
+
+mt:DigitalMedia
+      rdf:type dcterms:MediaType , skos:Concept ;
+      rdfs:seeAlso <http://dbpedia.org/resource/Category:Digital_media> ;
+      dc:description "Digital media used as medium to record a manifestation."@en ;
+      dc:title "digital media"^^xsd:string ;
+      skos:inScheme mt: ;
+      skos:prefLabel "digital media"^^xsd:string .
+      
+<http://dbpedia.org/resource/Category:Digital_media>
+      is:info_service isi:dbpedia .
+
+mt:DualDisc
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      rdfs:seeAlso dbpedia:DualDisc ;
+      dc:description "DualDisc used as medium to record am audio and/or video manifestation."@en ;
+      dc:title "DualDisc"^^xsd:string ;
+      dcterms:created "2004"^^xsd:gYear ;
+      skos:inScheme mt: ;
+      skos:prefLabel "DualDisc"^^xsd:string .
+      
+dbpedia:DualDisc
+      is:info_service isi:dbpedia .
+
+mt:EPrecord
+      rdf:type skos:Concept , dcterms:PhysicalMedium ;
+      rdfs:seeAlso dbpedia:Extended_play ;
+      dc:description "Extended Play record used as medium to record a musical manifestation."@en ;
+      dc:title "EP record"^^xsd:string ;
+      skos:altLabel "Extended Play record"^^xsd:string ;
+      skos:broader mt:VinylRecord ;
+      skos:inScheme mt: ;
+      skos:prefLabel "EP record"^^xsd:string .
+      
+dbpedia:Extended_play
+      is:info_service isi:dbpedia .
+
+mt:EightTrackCatridge
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      rdfs:seeAlso <http://dbpedia.org/resource/8-track_tape> ;
+      dc:description "Lear Jet Stereo 8 used as medium to record an audio manifestation."@en ;
+      dc:title "8-track cartridge"^^xsd:string ;
+      dcterms:created "1964"^^xsd:gYear ;
+      skos:altLabel "Stereo 8"^^xsd:string , "Lear Jet Stereo 8"^^xsd:string , "8-track"^^xsd:string , "8-track tape"^^xsd:string ;
+      skos:broader mt:Cartridge ;
+      skos:inScheme mt: ;
+      skos:prefLabel "8-track cartridge"^^xsd:string .
+      
+<http://dbpedia.org/resource/8-track_tape>
+      is:info_service isi:dbpedia .
+
+mt:FLAC
+      rdf:type skos:Concept , dcterms:FileFormat ;
+      rdfs:seeAlso dbpedia:Free_Lossless_Audio_Codec ;
+      dc:description "Free Lossless Audio Codec used as medium to record an audio manifestation."@en ;
+      dc:title "FLAC"^^xsd:string ;
+      dcterms:created "2001"^^xsd:gYear ;
+      skos:altLabel "Free Lossless Audio Codec"^^xsd:string ;
+      skos:broader mt:AudioFile ;
+      skos:inScheme mt: ;
+      skos:prefLabel "FLAC"^^xsd:string .
+
+dbpedia:Free_Lossless_Audio_Codec
+      is:info_service isi:dbpedia .
+
+mt:FourTrackCatridge
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      rdfs:seeAlso dbpedia:Stereo-Pak ;
+      dc:description "Muntz Stereo-Pak used as medium to record an audio manifestation."@en ;
+      dc:title "4-track cartridge"^^xsd:string ;
+      dcterms:created "1962"^^xsd:gYear ;
+      skos:altLabel "Muntz Stereo-Pak"^^xsd:string , "Stereo-Pak"^^xsd:string ;
+      skos:broader mt:Cartridge ;
+      skos:inScheme mt: ;
+      skos:prefLabel "4-track cartridge"^^xsd:string .
+      
+dbpedia:Stereo-Pak
+      is:info_service isi:dbpedia .
+
+mt:HDCD
+      rdf:type skos:Concept , dcterms:PhysicalMedium ;
+      rdfs:seeAlso dbpedia:High_Definition_Compatible_Digital ;
+      dc:description "High Definition Compatible Digital used as medium to record an audio manifestation."@en ;
+      dc:title "HDCD"^^xsd:string ;
+      dcterms:created "1995"^^xsd:gYear ;
+      skos:altLabel "High Definition Compatible Digital"^^xsd:string ;
+      skos:broader mt:OpticalDisc , mt:Audio ;
+      skos:inScheme mt: ;
+      skos:prefLabel "HDCD"^^xsd:string .
+      
+dbpedia:High_Definition_Compatible_Digital
+      is:info_service isi:dbpedia .
+
+mt:HDDVD
+      rdf:type skos:Concept , dcterms:PhysicalMedium ;
+      rdfs:seeAlso dbpedia:HD_DVD ;
+      dc:description "High-Definition/Density DVD used as medium to record an audio and/or video manifestation."@en ;
+      dc:title "HD DVD"^^xsd:string ;
+      dcterms:created "2005"^^xsd:gYear ;
+      skos:altLabel "High-Definition DVD"^^xsd:string , "High-Density DVD"^^xsd:string ;
+      skos:broader mt:DVD ;
+      skos:inScheme mt: ;
+      skos:prefLabel "HD DVD"^^xsd:string .
+      
+dbpedia:HD_DVD
+      is:info_service isi:dbpedia .
+
+mt:LPRecord
+      rdf:type skos:Concept , dcterms:PhysicalMedium ;
+      rdfs:seeAlso dbpedia:LP_album ;
+      dc:description "Long-playing record used as medium to record a musical manifestation."@en ;
+      dc:title "LP record"^^xsd:string ;
+      dcterms:created "1948"^^xsd:gYear ;
+      skos:altLabel "Long-playing record"^^xsd:string ;
+      skos:broader mt:VinylRecord ;
+      skos:inScheme mt: ;
+      skos:prefLabel "LP record"^^xsd:string .
+      
+dbpedia:LP_album
+      is:info_service isi:dbpedia .
+
+mt:LaserDisc
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      rdfs:seeAlso dbpedia:Laserdisc ;
+      dc:description "used as medium to record a video (and audio) manifestation."@en ;
+      dc:title "LaserDisc"^^xsd:string ;
+      dcterms:created "1978"^^xsd:gYear ;
+      skos:broader mt:OpticalDisc ;
+      skos:inScheme mt: ;
+      skos:prefLabel "LaserDisc"^^xsd:string .
+      
+dbpedia:Laserdisc
+      is:info_service isi:dbpedia .
+
+mt:MP3
+      rdf:type dcterms:FileFormat , skos:Concept ;
+      rdfs:seeAlso dbpedia:MP3 ;
+      dc:description "MPEG-1 or MPEG-2 Audio Layer 3 (or III) used as medium to record an audio manifestation."@en ;
+      dc:title "MP3"^^xsd:string ;
+      dcterms:created "1993"^^xsd:gYear ;
+      skos:altLabel "MPEG-1 Audio Layer III"^^xsd:string , "MPEG-1 Audio Layer 3"^^xsd:string , "MPEG-2 Audio Layer 3"^^xsd:string , "MPEG-2 Audio Layer III"^^xsd:string ;
+      skos:broader mt:AudioFile ;
+      skos:inScheme mt: ;
+      skos:prefLabel "MP3"^^xsd:string .
+      
+dbpedia:MP3
+      is:info_service isi:dbpedia .
+
+mt:MPC
+      rdf:type skos:Concept , dcterms:FileFormat ;
+      rdfs:seeAlso dbpedia:Musepack ;
+      dc:description "Musepack used as medium to record an audio manifestation."@en ;
+      dc:title "MPC"^^xsd:string ;
+      dcterms:created "1997"^^xsd:gYear ;
+      skos:broader mt:AudioFile ;
+      skos:inScheme mt: ;
+      skos:prefLabel "MPC"^^xsd:string .
+      
+dbpedia:Musepack
+      is:info_service isi:dbpedia .
+
+mt:MagneticTape
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      rdfs:seeAlso dbpedia:Magnetic_tape ;
+      dc:description "Magnetic analogue tape used as medium to record a manifestation."@en ;
+      dc:title "magnetic tape"^^xsd:string ;
+      dcterms:created "1928"^^xsd:gYear ;
+      skos:inScheme mt: ;
+      skos:prefLabel "magnetic tape"^^xsd:string .
+      
+dbpedia:Magnetic_tape
+      is:info_service isi:dbpedia .
+
+mt:MiniDisc
+      rdf:type skos:Concept , dcterms:PhysicalMedium ;
+      rdfs:seeAlso dbpedia:MiniDisc ;
+      dc:description "MiniDisc used as medium to record an audio manifestation."@en ;
+      dc:title "MiniDisc"^^xsd:string ;
+      dcterms:created "1992"^^xsd:gYear ;
+      skos:broader mt:Audio , mt:OpticalDisc ;
+      skos:inScheme mt: ;
+      skos:prefLabel "MiniDisc"^^xsd:string .
+      
+dbpedia:MiniDisc
+      is:info_service isi:dbpedia .
+
+mt:MonkeysAudio
+      rdf:type skos:Concept , dcterms:FileFormat ;
+      rdfs:seeAlso <http://dbpedia.org/resource/Monkey%27s_Audio> ;
+      dc:description "Monkey's Audio used as medium to record an audio manifestation."@en ;
+      dc:title "Monkey's Audio"^^xsd:string ;
+      dcterms:created "2000"^^xsd:gYear ;
+      skos:broader mt:AudioFile ;
+      skos:inScheme mt: ;
+      skos:prefLabel "Monkey's Audio"^^xsd:string .
+      
+<http://dbpedia.org/resource/Monkey%27s_Audio>
+      is:info_service isi:dbpedia .
+
+mt:NABCartridge
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      rdfs:seeAlso dbpedia:Fidelipac ;
+      dc:description "Fidelipac used as medium to record an audio manifestation."@en ;
+      dc:title "NAB cartridge"^^xsd:string ;
+      dcterms:created "1959"^^xsd:gYear ;
+      skos:altLabel "cart"^^xsd:string , "Fidelipac"^^xsd:string ;
+      skos:broader mt:Cartridge ;
+      skos:inScheme mt: ;
+      skos:prefLabel "NAB cartridge"^^xsd:string .
+      
+dbpedia:Fidelipac
+      is:info_service isi:dbpedia .
+
+mt:OGG
+      rdf:type skos:Concept , dcterms:FileFormat ;
+      rdfs:seeAlso dbpedia:Vorbis ;
+      dc:description "Ogg Vorbis used as medium to record an audio manifestation."@en ;
+      dc:title "OGG"^^xsd:string ;
+      dcterms:created "2000"^^xsd:gYear ;
+      skos:altLabel "Ogg Vorbis"^^xsd:string ;
+      skos:broader mt:AudioFile ;
+      skos:inScheme mt: ;
+      skos:prefLabel "OGG"^^xsd:string .
+      
+dbpedia:Vorbis
+      is:info_service isi:dbpedia .
+
+mt:OpticalDisc
+      rdf:type skos:Concept , dcterms:MediaType ;
+      rdfs:seeAlso dbpedia:Optical_disc ;
+      dc:description "Optical disc used as medium to record a manifestation."@en ;
+      dc:title "optical disc"^^xsd:string ;
+      dcterms:created "1958"^^xsd:gYear ;
+      skos:inScheme mt: ;
+      skos:prefLabel "optical disc"^^xsd:string .
+      
+dbpedia:Optical_disc
+      is:info_service isi:dbpedia .
+
+mt:PianoRoll
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      rdfs:seeAlso dbpedia:Piano_roll ;
+      dc:description "Piano Roll used as medium to record a musical manifestation."@en ;
+      dc:title "piano roll"^^xsd:string ;
+      dcterms:created "1883"^^xsd:gYear ;
+      skos:broader mt:Audio ;
+      skos:inScheme mt: ;
+      skos:prefLabel "piano roll"^^xsd:string .
+      
+dbpedia:Piano_roll
+      is:info_service isi:dbpedia .
+
+mt:Radio
+      rdf:type skos:Concept , dcterms:MediaType ;
+      rdfs:seeAlso <http://dbpedia.org/resource/Category:Radio> ;
+      dc:description "An audio broadcast medium. Radio used as medium to distribute audio manifestations."@en ;
+      dc:title "radio"^^xsd:string ;
+      dcterms:created "1906"^^xsd:gYear ;
+      skos:broader mt:Broadcast , mt:Audio ;
+      skos:inScheme mt: ;
+      skos:prefLabel "radio"^^xsd:string .
+      
+<http://dbpedia.org/resource/Category:Radio>
+      is:info_service isi:dbpedia .
+
+mt:RealAudio
+      rdf:type skos:Concept , dcterms:FileFormat ;
+      rdfs:seeAlso dbpedia:RealAudio ;
+      dc:description "RealAudio used as medium to record an audio manifestation."@en ;
+      dc:title "RealAudio"^^xsd:string ;
+      dcterms:created "1995"^^xsd:gYear ;
+      skos:broader mt:AudioFile ;
+      skos:inScheme mt: ;
+      skos:prefLabel "RealAudio"^^xsd:string .
+      
+dbpedia:RealAudio
+      is:info_service isi:dbpedia .
+
+mt:ReelToReel
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      rdfs:seeAlso dbpedia:Reel-to-reel_audio_tape_recording ;
+      dc:description "Reel-to-reel used as medium to record an audio manifestation."@en ;
+      dc:title "Reel-to-reel"^^xsd:string ;
+      dcterms:created "1935"^^xsd:gYear ;
+      skos:broader mt:Audio , mt:MagneticTape ;
+      skos:inScheme mt: ;
+      skos:prefLabel "Reel-to-reel"^^xsd:string .
+      
+dbpedia:Reel-to-reel_audio_tape_recording
+      is:info_service isi:dbpedia .
+
+mt:SACD
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      rdfs:seeAlso dbpedia:Super_Audio_CD ;
+      dc:description "Super Audio Compact Disc used as medium to record an audio manifestation."@en ;
+      dc:title "SACD"^^xsd:string ;
+      dcterms:created "1999"^^xsd:gYear ;
+      skos:altLabel "Super Audio Compact Disc"^^xsd:string ;
+      skos:broader mt:OpticalDisc , mt:Audio ;
+      skos:inScheme mt: ;
+      skos:prefLabel "SACD"^^xsd:string .
+      
+dbpedia:Super_Audio_CD
+      is:info_service isi:dbpedia .
+
+mt:SVCD
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      rdfs:seeAlso dbpedia:Super_Video_CD ;
+      dc:description "Compact Disc Digital Video used as medium to record a video (and audio) manifestation."@en ;
+      dc:title "SVCD"^^xsd:string ;
+      dcterms:created "1998"^^xsd:gYear ;
+      skos:altLabel "Super Video CD"^^xsd:string , "Compact Disc Digital Video"^^xsd:string ;
+      skos:broader mt:Video , mt:CD ;
+      skos:inScheme mt: ;
+      skos:prefLabel "SVCD"^^xsd:string .
+      
+dbpedia:Super_Video_CD
+      is:info_service isi:dbpedia .
+
+mt:SVHS
+      rdf:type skos:Concept , dcterms:PhysicalMedium ;
+      rdfs:seeAlso dbpedia:S-VHS ;
+      dc:description "Super VHS used as medium to record a video (and audio) manifestation."@en ;
+      dc:title "S-VHS"^^xsd:string ;
+      dcterms:created "1987"^^xsd:gYear ;
+      skos:altLabel "Super VHS"^^xsd:string ;
+      skos:broader mt:Cassette , mt:Video ;
+      skos:inScheme mt: ;
+      skos:prefLabel "S-VHS"^^xsd:string .
+      
+dbpedia:S-VHS
+      is:info_service isi:dbpedia .
+
+mt:SlotMusic
+      rdf:type skos:Concept , dcterms:PhysicalMedium ;
+      rdfs:seeAlso dbpedia:SlotMusic ;
+      dc:description "slotMusic used as medium to record an audio manifestation."@en ;
+      dc:title "slotMusic"^^xsd:string ;
+      dcterms:created "2008"^^xsd:gYear ;
+      skos:inScheme mt: ;
+      skos:prefLabel "slotMusic"^^xsd:string .
+      
+dbpedia:SlotMusic
+      is:info_service isi:dbpedia .
+
+mt:Stream
+      rdf:type dcterms:MediaType , skos:Concept ;
+      rdfs:seeAlso dbpedia:Streaming_media ;
+      dc:description "Transmission over a network used as medium to broadcast audio and/or video manifestations."@en ;
+      dc:title "stream"^^xsd:string ;
+      skos:inScheme mt: ;
+      skos:prefLabel "stream"^^xsd:string .
+      
+dbpedia:Streaming_media
+      is:info_service isi:dbpedia .
+
+mt:TV
+      rdf:type dcterms:MediaType , skos:Concept ;
+      rdfs:seeAlso <http://dbpedia.org/resource/Category:Television> ;
+      dc:description "Television as an audio and video broadcast medium. TV used as medium to distribute video (and audio) manifestations."@en ;
+      dc:title "TV"^^xsd:string ;
+      dcterms:created "1925"^^xsd:gYear ;
+      skos:altLabel "Television"^^xsd:string ;
+      skos:broader mt:Broadcast ;
+      skos:inScheme mt: ;
+      skos:prefLabel "TV"^^xsd:string .
+      
+<http://dbpedia.org/resource/Category:Television>
+      is:info_service isi:dbpedia .
+
+mt:Telephone
+      rdf:type dcterms:MediaType , skos:Concept ;
+      rdfs:seeAlso dbpedia:Telephone ;
+      dc:description "Telephone used as medium to transmit a manifestation."@en ;
+      dc:title "telephone"^^xsd:string ;
+      dcterms:created "1844"^^xsd:gYear ;
+      skos:broader mt:Audio ;
+      skos:inScheme mt: ;
+      skos:prefLabel "telephone"^^xsd:string .
+      
+dbpedia:Telephone
+      is:info_service isi:dbpedia .
+
+mt:UMD
+      rdf:type skos:Concept , dcterms:PhysicalMedium ;
+      rdfs:seeAlso dbpedia:Universal_Media_Disc ;
+      dc:description "Universal Media Disc used as medium a manifestation (a game, a video, an music song)."@en ;
+      dc:title "UMD"^^xsd:string ;
+      dcterms:created "2004"^^xsd:gYear ;
+      skos:altLabel "Universal Media Disc"^^xsd:string ;
+      skos:broader mt:OpticalDisc ;
+      skos:inScheme mt: ;
+      skos:prefLabel "UMD"^^xsd:string .
+      
+dbpedia:Universal_Media_Disc
+      is:info_service isi:dbpedia .
+
+mt:USBFlashDrive
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      rdfs:seeAlso dbpedia:USB_flash_drive ;
+      dc:description "USB Flash Drive used as medium to record manifestations."@en ;
+      dc:title "USB Flash Drive"^^xsd:string ;
+      dcterms:created "2000"^^xsd:gYear ;
+      skos:inScheme mt: ;
+      skos:prefLabel "USB Flash Drive"^^xsd:string .
+      
+dbpedia:USB_flash_drive
+      is:info_service isi:dbpedia .
+
+mt:VCD
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      rdfs:seeAlso dbpedia:Video_CD ;
+      dc:description "Compact Disc Digital Video used as medium to record a video (and audio) manifestation."@en ;
+      dc:title "VCD"^^xsd:string ;
+      dcterms:created "1993"^^xsd:gYear ;
+      skos:altLabel "Video CD"^^xsd:string , "Compact Disc Digital Video"^^xsd:string ;
+      skos:broader mt:Video , mt:CD ;
+      skos:inScheme mt: ;
+      skos:prefLabel "VCD"^^xsd:string .
+      
+dbpedia:Video_CD
+      is:info_service isi:dbpedia .
+
+mt:VHS
+      rdf:type skos:Concept , dcterms:PhysicalMedium ;
+      rdfs:seeAlso dbpedia:VHS ;
+      dc:description "Video Home System used as medium to record an audio and/or video manifestation."@en ;
+      dc:title "VHS"^^xsd:string ;
+      dcterms:created "1976"^^xsd:gYear ;
+      skos:altLabel "Video Home System"^^xsd:string ;
+      skos:broader mt:Cassette , mt:Video ;
+      skos:inScheme mt: ;
+      skos:prefLabel "VHS"^^xsd:string .
+      
+dbpedia:VHS
+      is:info_service isi:dbpedia .
+
+mt:Video
+      rdf:type skos:Concept , dcterms:MediaType ;
+      rdfs:seeAlso <http://dbpedia.org/resource/Category:Video_storage> ;
+      dc:description "Video used as medium to record a video manifestation."@en ;
+      dc:title "video"^^xsd:string ;
+      skos:inScheme mt: ;
+      skos:prefLabel "video"^^xsd:string .
+      
+<http://dbpedia.org/resource/Category:Video_storage>
+      is:info_service isi:dbpedia .
+
+mt:VinylRecord
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      rdfs:seeAlso dbpedia:Gramophone_record ;
+      dc:description "Vinyl record used as medium to record an audio manifestation."@en ;
+      dc:title "vinyl record"^^xsd:string ;
+      dcterms:created "1895"^^xsd:gYear ;
+      skos:broader mt:Audio ;
+      skos:inScheme mt: ;
+      skos:prefLabel "vinyl record"^^xsd:string .
+      
+dbpedia:Gramophone_record
+      is:info_service isi:dbpedia .
+
+mt:WAVE
+      rdf:type skos:Concept , dcterms:FileFormat ;
+      rdfs:seeAlso dbpedia:WAV ;
+      dc:description "Waveform Audio File Format used as medium to record an audio manifestation."@en ;
+      dc:title "WAVE"^^xsd:string ;
+      dcterms:created "1991"^^xsd:gYear ;
+      skos:altLabel "Waveform Audio File Format"^^xsd:string ;
+      skos:broader mt:AudioFile ;
+      skos:inScheme mt: ;
+      skos:prefLabel "WAVE"^^xsd:string .
+      
+dbpedia:WAV
+      is:info_service isi:dbpedia .
+
+mt:WMA
+      rdf:type dcterms:FileFormat , skos:Concept ;
+      rdfs:seeAlso dbpedia:Windows_Media_Audio ;
+      dc:description "Windows Media Audio used as medium to record an audio manifestation."@en ;
+      dc:title "WMA"^^xsd:string ;
+      dcterms:created "1999"^^xsd:gYear ;
+      skos:altLabel "Windows Media Audio"^^xsd:string ;
+      skos:broader mt:AudioFile ;
+      skos:inScheme mt: ;
+      skos:prefLabel "WMA"^^xsd:string .
+      
+dbpedia:Windows_Media_Audio
+      is:info_service isi:dbpedia .
+
+mt:WaxCylinder
+      rdf:type dcterms:PhysicalMedium , skos:Concept ;
+      rdfs:seeAlso dbpedia:Phonograph_cylinder ;
+      dc:description "Wax cylinder used as medium to record a musical manifestation."@en ;
+      dc:title "wax cylinder"^^xsd:string ;
+      dcterms:created "1877"^^xsd:gYear ;
+      skos:broader mt:Audio ;
+      skos:inScheme mt: ;
+      skos:prefLabel "wax cylinder"^^xsd:string .
+      
+dbpedia:Phonograph_cylinder
+      is:info_service isi:dbpedia .
