@@ -24,6 +24,8 @@ version="XHTML+RDFa 1.0">
   <link about="http://purl.org/smiy/" rel="foaf:topic" rev="foaf:page" href="http://purl.org/ontology/rec/core#" />
   <link about="http://purl.org/smiy/" rel="foaf:topic" rev="foaf:page" href="http://purl.org/ontology/wo/core#" />
   <link about="http://purl.org/smiy/" rel="foaf:topic" rev="foaf:page" href="http://purl.org/ontology/cco/core#" />
+  <link about="http://purl.org/smiy/" rel="foaf:topic" rev="foaf:page" href="http://purl.org/ontology/wi/core#" />
+  <link about="http://purl.org/smiy/" rel="foaf:topic" rev="foaf:page" href="http://purl.org/ontology/prv/core#" />
   <link about="http://purl.org/smiy/" rel="foaf:topic" rev="foaf:page" href="http://smiy.svn.sourceforge.net/viewvc/smiy/specgen/trunk/" />
   <link about="http://purl.org/smiy/" rel="foaf:topic" rev="foaf:page" href="http://smiy.wordpress.com/" />
   <link about="http://purl.org/smiy/" rel="foaf:topic" rev="foaf:page" href="http://smiy.svn.sourceforge.net/viewvc/smiy/" />
@@ -35,7 +37,7 @@ version="XHTML+RDFa 1.0">
 <body>
   <h1><span >Some More Individual</span></h1>
 
-  <h2>Webspace Index <span about="http://purl.org/smiy/" property="dc:date" content="2010-09-20T20:43:52+01:00" datatype="xsd:dateTime">20 September 2010</span></h2>
+  <h2>Webspace Index <span about="http://purl.org/smiy/" property="dc:date" content="2010-12-20T15:27:52+01:00" datatype="xsd:dateTime">20 December 2010</span></h2>
 <table class="header" border="0" about="http://purl.org/smiy/">
   <tr>
     <td>
@@ -123,22 +125,23 @@ Individual Webspace Index</em> and accompanying documentation in RDFa.</p>
 
 <h2 id="sec-status">Abstract</h2>
 <p about="http://purl.org/smiy/" property="dc:decription">
-The <em>Some More Individual</em> webspace index provides an overview of a couple <em>Semantic Web Ontologies</em> and project, which are related to them. They are mainly based in the media 
-and personalisation domain, however, some of them are also representing basic modelling concepts, e.g. ordered lists. This document contains a RDFa description of the <em>Some More Individual</em> 
+The <em>Some More Individual</em> webspace index provides an overview of a couple of <em>Semantic Web Ontologies</em> and projects, which are related to them. They are mainly based in the media 
+and personalisation domain, however, some of them are also representing basic modelling concepts, e.g. ordered lists. This document contains an RDFa description of the <em>Some More Individual</em> 
 webspace index.</p>
 
   <h2 id="sec-toc">SMI Webspace Index</h2>
 
   <ul about="http://purl.org/smiy/">
-    <li><a rel="rdfs:seeAlso" href="http://purl.org/ontology/is/infoservice.html">The Info Service Ontology</a></li>
-    <li><a rel="rdfs:seeAlso" href="http://purl.org/ontology/olo/orderedlistontology.html">The Ordered List Ontology</a></li>
-    <li><a rel="rdfs:seeAlso" href="http://purl.org/ontology/co/counterontology.html">The Counter Ontology</a></li>
-    <li><a rel="rdfs:seeAlso" href="http://purl.org/ontology/ao/associationontology.html">The Association Ontology</a></li>
-    <li><a rel="rdfs:seeAlso" href="http://purl.org/ontology/pbo/playbackontology.html">The Play Back Ontology</a></li>
-    <li><a rel="rdfs:seeAlso" href="http://purl.org/ontology/rec/recommendationontology.html">Recommendation Ontology</a></li>
-    <li><a rel="rdfs:seeAlso" href="http://purl.org/ontology/wo/weightingontology.html">Weighting Ontology</a></li>
-    <li><a rel="rdfs:seeAlso" href="http://purl.org/ontology/cco/cognitivecharacteristics.html">Cognitive Characteristics Ontology</a></li>
-    <li><a rel="rdfs:seeAlso" href="http://smiy.svn.sourceforge.net/viewvc/smiy/specgen/trunk/">My SpecGen version 6</a></li>
+    <li>The <a rel="rdfs:seeAlso" href="http://purl.org/ontology/is/core#">Info Service Ontology</a></li>
+    <li>The <a rel="rdfs:seeAlso" href="http://purl.org/ontology/olo/core#">Ordered List Ontology</a></li>
+    <li>The <a rel="rdfs:seeAlso" href="http://purl.org/ontology/co/core#">Counter Ontology</a></li>
+    <li>The <a rel="rdfs:seeAlso" href="http://purl.org/ontology/ao/core#">Association Ontology</a></li>
+    <li>The <a rel="rdfs:seeAlso" href="http://purl.org/ontology/pbo/core#">Play Back Ontology</a></li>
+    <li>The <a rel="rdfs:seeAlso" href="http://purl.org/ontology/rec/core#">Recommendation Ontology</a></li>
+    <li>The <a rel="rdfs:seeAlso" href="http://purl.org/ontology/wo/core#">Weighting Ontology</a></li>
+    <li>The <a rel="rdfs:seeAlso" href="http://purl.org/ontology/cco/core#">Cognitive Characteristics Ontology</a> (and its predecessor the <a rel="rdfs:seeAlso" href="http://purl.org/ontology/wi/core#">Weighted Interests Vocabulary</a>)</li>
+    <li>The <a rel="rdfs:seeAlso" href="http://purl.org/ontology/prv/core#">Property Reification Vocabulary</a></li>
+    <li>The <a rel="rdfs:seeAlso" href="http://smiy.svn.sourceforge.net/viewvc/smiy/specgen/trunk/">My SpecGen version 6</a></li>
   </ul>
 
   <h3 id="sec-ack">Acknowledgments</h3>
@@ -150,11 +153,9 @@ href="http://foaf.me/intrz#me">Mats Skillingstad</a>, <a href="http://www.cp.jku
 href="http://www.istc.cnr.it/createhtml.php?nbr=71">Aldo Gangemi</a> and the <a rel="rdfs:seeAlso" href="http://groups.google.com/group/music-ontology-specification-group">Music Ontology 
 mailing list</a>, the <a rel="rdfs:seeAlso" href="http://lists.w3.org/Archives/Public/public-lod/">Linked Open Data mailing list</a>, the <a rel="rdfs:seeAlso" 
 href="http://lists.w3.org/Archives/Public/semantic-web/">Semantic Web mailing list</a>, the <a rel="rdfs:seeAlso" href="http://groups.google.com/group/pedantic-web">Pedantic Web mailing 
-list</a> and the <em><a rel="rdfs:seeAlso" href="http://lists.foaf-project.org/mailman/listinfo/foaf-dev">FOAF developers mailing list</a></em> to help to establish all these useful ontologies. 
-Furthermore, <a about="http://purl.org/smiy/" rel="rdfs:seeAlso" href="http://danbri.org/">Dan Brickley</a> and <a rel="rdfs:seeAlso" href="http://nicecupoftea.org/">Libby Miller</a> to 
+list</a> and the <a rel="rdfs:seeAlso" href="http://lists.foaf-project.org/mailman/listinfo/foaf-dev">FOAF developers mailing list</a> to help to establish all these useful ontologies. 
+Furthermore, <a rel="rdfs:seeAlso" href="http://danbri.org/">Dan Brickley</a> and <a rel="rdfs:seeAlso" href="http://nicecupoftea.org/">Libby Miller</a> to 
 provide the basis for the ontology specification document generation.</p>
 
 </body>
 </html>
-
-

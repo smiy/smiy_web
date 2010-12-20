@@ -26,7 +26,7 @@
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
 wi:   rdf:type owl:Ontology ;
-      dc:creator "Danica Damljanovic"^^xsd:string , <http://swordfish.rdfweb.org/people/libby/rdfweb/webwho.xrdf#me> , "Yi Zeng"^^xsd:string , <http://danbri.org/foaf.rdf#danbri> , <http://foaf.me/zazi#me> , <http://apassant.net/alex> , <http://www.johnbreslin.com/foaf/foaf.rdf#me> , "Yan Wang"^^xsd:string , <http://tobyinkster.co.uk/#i> , <http://sw.deri.org/~sheila/foaf.rdf#me> , <http://semantictweet.com/der42#me> , "Zhisheng Huang"^^xsd:string ;
+      dc:creator "Danica Damljanovic"^^xsd:string , <http://swordfish.rdfweb.org/people/libby/rdfweb/webwho.xrdf#me> , "Yi Zeng"^^xsd:string , <http://danbri.org/foaf.rdf#danbri> , <http://foaf.me/zazi#me> , <http://www.johnbreslin.com/foaf/foaf.rdf#me> , "Yan Wang"^^xsd:string , <http://tobyinkster.co.uk/#i> , <http://sw.deri.org/~sheila/foaf.rdf#me> , "Zhisheng Huang"^^xsd:string ;
       dc:date "2010-09-14T15:20:52+01:00"^^xsd:dateTime ;
       dc:description "A vocabulary for describing preferences (interests) within contexts, their temporal dynamics and their origin"@en ;
       dc:title "Weighted Interests Vocabulary"@en ;
