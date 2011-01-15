@@ -13,7 +13,7 @@
 @prefix event:   <http://purl.org/NET/c4dm/event.owl#> .
 @prefix dcterms:	<http://purl.org/dc/terms/> .
 
-<http://smiy.sourceforge.net/wi/examples/N3/wi_-_music_preference_example.n3>
+<http://smiy.sourceforge.net/wi/versions/20100812/examples/N3/wi_-_music_preference_example.n3>
       rdf:type bibo:Document ;
       dc:creator <http://foaf.me/zazi#me> ;
       dc:date "2010-08-14T17:25:52+01:00"^^xsd:dateTime ;

@@ -13,7 +13,7 @@
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc:      <http://purl.org/dc/elements/1.1/> .
 
-<http://smiy.sourceforge.net/wi/examples/N3/wi_-_preference_example_-_w_interest_dynamics.n3>
+<http://smiy.sourceforge.net/wi/versions/20100812/examples/N3/wi_-_preference_example_-_w_interest_dynamics.n3>
       rdf:type bibo:Document ;
       dc:creator <http://foaf.me/zazi#me> ;
       dc:date "2010-08-14T11:29:52+01:00"^^xsd:dateTime ;

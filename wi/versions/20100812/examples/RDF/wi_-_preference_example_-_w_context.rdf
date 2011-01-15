@@ -24,7 +24,7 @@
       </days:WeekdayInterval>
     </wi:time_period>
   </wi:Context>
-  <bibo:Document rdf:about="http://smiy.sourceforge.net/wi/examples/RDF/wi_-_preference_example_-_w_context.rdf">
+  <bibo:Document rdf:about="http://smiy.sourceforge.net/wi/versions/20100812/examples/RDF/wi_-_preference_example_-_w_context.rdf">
     <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
     <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-08-14T11:29:52+01:00</dc:date>
     <dc:description xml:lang="en">This document includes a preference interests example with context based on the Weighted Interests Vocabulary.</dc:description>

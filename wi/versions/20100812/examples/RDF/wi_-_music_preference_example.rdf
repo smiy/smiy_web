@@ -118,7 +118,7 @@
     </wi:preference>
     <foaf:name>Bob Ferris</foaf:name>
   </foaf:Person>
-  <bibo:Document rdf:about="http://smiy.sourceforge.net/wi/examples/RDF/wi_-_music_preference_example.rdf">
+  <bibo:Document rdf:about="http://smiy.sourceforge.net/wi/versions/20100812/examples/RDF/wi_-_music_preference_example.rdf">
     <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
     <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-08-14T17:25:52+01:00</dc:date>
     <dc:description xml:lang="en">This document includes a music preference example with context based on the Weighted Interests Vocabulary.</dc:description>

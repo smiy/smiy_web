@@ -12,7 +12,7 @@
 @prefix ex:		<http://example.org/> .
 @prefix time:	<http://www.w3.org/2006/time#> .
 
-<http://smiy.sourceforge.net/wi/examples/N3/wi_-_scientific_research_interests_example.n3>
+<http://smiy.sourceforge.net/wi/versions/20100812/examples/N3/wi_-_scientific_research_interests_example.n3>
       rdf:type bibo:Document ;
       dc:creator <http://foaf.me/zazi#me> ;
       dc:date "2010-08-09T18:42:52+01:00"^^xsd:dateTime ;
