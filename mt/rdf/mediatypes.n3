@@ -133,16 +133,16 @@ mt:Cartridge
 mt:Cassette
       rdf:type dcterms:PhysicalMedium , skos:Concept ;
       dc:description "Cassette used as medium to record an audio and/or video manifestation."@en ;
-      dc:title "Cassette"^^xsd:string ;
+      dc:title "cassette"^^xsd:string ;
       dcterms:created "1964"^^xsd:gYear ;
       skos:broader mt:MagneticTape ;
       skos:inScheme mt: ;
-      skos:prefLabel "Cassette"^^xsd:string .
+      skos:prefLabel "cassette"^^xsd:string .
 
 mt:CompactCassette
       rdf:type dcterms:PhysicalMedium , skos:Concept ;
       rdfs:seeAlso dbpedia:Compact_Cassette ;
-      dc:description "Compact Cassette used as medium to record an audio and manifestation."@en ;
+      dc:description "Compact Cassette used as medium to record an audio manifestation."@en ;
       dc:title "Compact Cassette"^^xsd:string ;
       dcterms:created "1964"^^xsd:gYear ;
       skos:altLabel "cassette"^^xsd:string , "audio cassette"^^xsd:string , "tape"^^xsd:string , "cassette tape"^^xsd:string ;
@@ -184,7 +184,7 @@ dbpedia:Digital_Compact_Cassette
 mt:DVD
       rdf:type dcterms:PhysicalMedium , skos:Concept ;
       rdfs:seeAlso dbpedia:DVD ;
-      dc:description "Digital Versatile Disc used as medium to record an audio and/or video manifestation."@en ;
+      dc:description "Digital Versatile Disc used as medium to record a manifestation."@en ;
       dc:title "DVD"^^xsd:string ;
       dcterms:created "1995"^^xsd:gYear ;
       skos:altLabel "Digital Versatile Disc"^^xsd:string ;
@@ -242,7 +242,7 @@ mt:DualDisc
 dbpedia:DualDisc
       is:info_service isi:dbpedia .
 
-mt:EPrecord
+mt:EPRecord
       rdf:type skos:Concept , dcterms:PhysicalMedium ;
       rdfs:seeAlso dbpedia:Extended_play ;
       dc:description "Extended Play record used as medium to record a musical manifestation."@en ;
@@ -342,7 +342,7 @@ dbpedia:LP_album
 mt:LaserDisc
       rdf:type dcterms:PhysicalMedium , skos:Concept ;
       rdfs:seeAlso dbpedia:Laserdisc ;
-      dc:description "used as medium to record a video (and audio) manifestation."@en ;
+      dc:description "LaserDisc used as medium to record a video (and audio) manifestation."@en ;
       dc:title "LaserDisc"^^xsd:string ;
       dcterms:created "1978"^^xsd:gYear ;
       skos:broader mt:OpticalDisc ;
@@ -446,7 +446,7 @@ dbpedia:Vorbis
       is:info_service isi:dbpedia .
 
 mt:OpticalDisc
-      rdf:type skos:Concept , dcterms:MediaType ;
+      rdf:type skos:Concept , dcterms:PhysicalMedium ;
       rdfs:seeAlso dbpedia:Optical_disc ;
       dc:description "Optical disc used as medium to record a manifestation."@en ;
       dc:title "optical disc"^^xsd:string ;
@@ -460,7 +460,7 @@ dbpedia:Optical_disc
 mt:PianoRoll
       rdf:type dcterms:PhysicalMedium , skos:Concept ;
       rdfs:seeAlso dbpedia:Piano_roll ;
-      dc:description "Piano Roll used as medium to record a musical manifestation."@en ;
+      dc:description "Piano roll used as medium to record a musical manifestation."@en ;
       dc:title "piano roll"^^xsd:string ;
       dcterms:created "1883"^^xsd:gYear ;
       skos:broader mt:Audio ;
@@ -618,11 +618,11 @@ dbpedia:Universal_Media_Disc
 mt:USBFlashDrive
       rdf:type dcterms:PhysicalMedium , skos:Concept ;
       rdfs:seeAlso dbpedia:USB_flash_drive ;
-      dc:description "USB Flash Drive used as medium to record manifestations."@en ;
-      dc:title "USB Flash Drive"^^xsd:string ;
+      dc:description "USB flash drive used as medium to record manifestations."@en ;
+      dc:title "USB flash drive"^^xsd:string ;
       dcterms:created "2000"^^xsd:gYear ;
       skos:inScheme mt: ;
-      skos:prefLabel "USB Flash Drive"^^xsd:string .
+      skos:prefLabel "USB flash drive"^^xsd:string .
       
 dbpedia:USB_flash_drive
       is:info_service isi:dbpedia .
@@ -658,7 +658,7 @@ dbpedia:VHS
 mt:Video
       rdf:type skos:Concept , dcterms:MediaType ;
       rdfs:seeAlso <http://dbpedia.org/resource/Category:Video_storage> ;
-      dc:description "Video used as medium to record a video manifestation."@en ;
+      dc:description "Video used as medium to record a video (and audio) manifestation."@en ;
       dc:title "video"^^xsd:string ;
       skos:inScheme mt: ;
       skos:prefLabel "video"^^xsd:string .
@@ -674,7 +674,8 @@ mt:VinylRecord
       dcterms:created "1895"^^xsd:gYear ;
       skos:broader mt:Audio ;
       skos:inScheme mt: ;
-      skos:prefLabel "vinyl record"^^xsd:string .
+      skos:prefLabel "vinyl record"^^xsd:string ;
+      skos:altLabel "gramophone record"^^xsd:string .
       
 dbpedia:Gramophone_record
       is:info_service isi:dbpedia .
@@ -715,7 +716,8 @@ mt:WaxCylinder
       dcterms:created "1877"^^xsd:gYear ;
       skos:broader mt:Audio ;
       skos:inScheme mt: ;
-      skos:prefLabel "wax cylinder"^^xsd:string .
+      skos:prefLabel "wax cylinder"^^xsd:string ;
+      skos:altLabel "phonograph cylinder"^^xsd:string .
       
 dbpedia:Phonograph_cylinder
       is:info_service isi:dbpedia .

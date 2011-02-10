@@ -268,15 +268,15 @@
   </dcterms:PhysicalMedium>
   <dcterms:PhysicalMedium rdf:about="http://purl.org/ontology/mt/Cassette">
     <dc:description xml:lang="en">Cassette used as medium to record an audio and/or video manifestation.</dc:description>
-    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cassette</dc:title>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cassette</dc:title>
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1964</dcterms:created>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:broader rdf:resource="http://purl.org/ontology/mt/MagneticTape"/>
     <skos:inScheme rdf:resource="http://purl.org/ontology/mt/"/>
-    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cassette</skos:prefLabel>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cassette</skos:prefLabel>
   </dcterms:PhysicalMedium>
   <dcterms:PhysicalMedium rdf:about="http://purl.org/ontology/mt/CompactCassette">
-    <dc:description xml:lang="en">Compact Cassette used as medium to record an audio and manifestation.</dc:description>
+    <dc:description xml:lang="en">Compact Cassette used as medium to record an audio manifestation.</dc:description>
     <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Compact Cassette</dc:title>
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1964</dcterms:created>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -315,7 +315,7 @@
     <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DCC</skos:prefLabel>
   </skos:Concept>
   <dcterms:PhysicalMedium rdf:about="http://purl.org/ontology/mt/DVD">
-    <dc:description xml:lang="en">Digital Versatile Disc used as medium to record an audio and/or video manifestation.</dc:description>
+    <dc:description xml:lang="en">Digital Versatile Disc used as medium to record a manifestation.</dc:description>
     <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DVD</dc:title>
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1995</dcterms:created>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -362,7 +362,7 @@
     <skos:inScheme rdf:resource="http://purl.org/ontology/mt/"/>
     <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DualDisc</skos:prefLabel>
   </dcterms:PhysicalMedium>
-  <skos:Concept rdf:about="http://purl.org/ontology/mt/EPrecord">
+  <skos:Concept rdf:about="http://purl.org/ontology/mt/EPRecord">
     <dc:description xml:lang="en">Extended Play record used as medium to record a musical manifestation.</dc:description>
     <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EP record</dc:title>
     <rdf:type rdf:resource="http://purl.org/dc/terms/PhysicalMedium"/>
@@ -445,7 +445,7 @@
     <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LP record</skos:prefLabel>
   </skos:Concept>
   <dcterms:PhysicalMedium rdf:about="http://purl.org/ontology/mt/LaserDisc">
-    <dc:description xml:lang="en">used as medium to record a video (and audio) manifestation.</dc:description>
+    <dc:description xml:lang="en">LaserDisc used as medium to record a video (and audio) manifestation.</dc:description>
     <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LaserDisc</dc:title>
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1978</dcterms:created>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -535,13 +535,13 @@
     <dc:description xml:lang="en">Optical disc used as medium to record a manifestation.</dc:description>
     <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">optical disc</dc:title>
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1958</dcterms:created>
-    <rdf:type rdf:resource="http://purl.org/dc/terms/MediaType"/>
+    <rdf:type rdf:resource="http://purl.org/dc/terms/PhysicalMedium"/>
     <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Optical_disc"/>
     <skos:inScheme rdf:resource="http://purl.org/ontology/mt/"/>
     <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">optical disc</skos:prefLabel>
   </skos:Concept>
   <dcterms:PhysicalMedium rdf:about="http://purl.org/ontology/mt/PianoRoll">
-    <dc:description xml:lang="en">Piano Roll used as medium to record a musical manifestation.</dc:description>
+    <dc:description xml:lang="en">Piano roll used as medium to record a musical manifestation.</dc:description>
     <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">piano roll</dc:title>
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1883</dcterms:created>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -669,13 +669,13 @@
     <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMD</skos:prefLabel>
   </skos:Concept>
   <dcterms:PhysicalMedium rdf:about="http://purl.org/ontology/mt/USBFlashDrive">
-    <dc:description xml:lang="en">USB Flash Drive used as medium to record manifestations.</dc:description>
-    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USB Flash Drive</dc:title>
+    <dc:description xml:lang="en">USB flash drive used as medium to record manifestations.</dc:description>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USB flash drive</dc:title>
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2000</dcterms:created>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/USB_flash_drive"/>
     <skos:inScheme rdf:resource="http://purl.org/ontology/mt/"/>
-    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USB Flash Drive</skos:prefLabel>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USB flash drive</skos:prefLabel>
   </dcterms:PhysicalMedium>
   <dcterms:PhysicalMedium rdf:about="http://purl.org/ontology/mt/VCD">
     <dc:description xml:lang="en">Compact Disc Digital Video used as medium to record a video (and audio) manifestation.</dc:description>
@@ -703,7 +703,7 @@
     <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VHS</skos:prefLabel>
   </skos:Concept>
   <skos:Concept rdf:about="http://purl.org/ontology/mt/Video">
-    <dc:description xml:lang="en">Video used as medium to record a video manifestation.</dc:description>
+    <dc:description xml:lang="en">Video used as medium to record a video (and audio) manifestation.</dc:description>
     <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">video</dc:title>
     <rdf:type rdf:resource="http://purl.org/dc/terms/MediaType"/>
     <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Category:Video_storage"/>
@@ -719,6 +719,7 @@
     <skos:broader rdf:resource="http://purl.org/ontology/mt/Audio"/>
     <skos:inScheme rdf:resource="http://purl.org/ontology/mt/"/>
     <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vinyl record</skos:prefLabel>
+    <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gramophone record</skos:altLabel>
   </dcterms:PhysicalMedium>
   <skos:Concept rdf:about="http://purl.org/ontology/mt/WAVE">
     <dc:description xml:lang="en">Waveform Audio File Format used as medium to record an audio manifestation.</dc:description>
@@ -751,5 +752,6 @@
     <skos:broader rdf:resource="http://purl.org/ontology/mt/Audio"/>
     <skos:inScheme rdf:resource="http://purl.org/ontology/mt/"/>
     <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wax cylinder</skos:prefLabel>
+    <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phonograph cylinder</skos:altLabel>
   </dcterms:PhysicalMedium>
 </rdf:RDF>
