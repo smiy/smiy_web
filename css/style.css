@@ -92,3 +92,8 @@ specterm.h3 {
 	text-align:right;
 	margin-right:20px;
 }
+
+.infobox_whitespace {
+	width:150px;
+	height:50px;	
+}
