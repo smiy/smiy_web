@@ -372,7 +372,7 @@
     <skos:inScheme rdf:resource="http://purl.org/ontology/mt/"/>
     <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EP record</skos:prefLabel>
   </skos:Concept>
-  <dcterms:PhysicalMedium rdf:about="http://purl.org/ontology/mt/EightTrackCatridge">
+  <dcterms:PhysicalMedium rdf:about="http://purl.org/ontology/mt/EightTrackCartridge">
     <dc:description xml:lang="en">Lear Jet Stereo 8 used as medium to record an audio manifestation.</dc:description>
     <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8-track cartridge</dc:title>
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1964</dcterms:created>
@@ -397,7 +397,7 @@
     <skos:inScheme rdf:resource="http://purl.org/ontology/mt/"/>
     <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FLAC</skos:prefLabel>
   </skos:Concept>
-  <dcterms:PhysicalMedium rdf:about="http://purl.org/ontology/mt/FourTrackCatridge">
+  <dcterms:PhysicalMedium rdf:about="http://purl.org/ontology/mt/FourTrackCartridge">
     <dc:description xml:lang="en">Muntz Stereo-Pak used as medium to record an audio manifestation.</dc:description>
     <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4-track cartridge</dc:title>
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1962</dcterms:created>

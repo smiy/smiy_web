@@ -255,7 +255,7 @@ mt:EPRecord
 dbpedia:Extended_play
       is:info_service isi:dbpedia .
 
-mt:EightTrackCatridge
+mt:EightTrackCartridge
       rdf:type dcterms:PhysicalMedium , skos:Concept ;
       rdfs:seeAlso <http://dbpedia.org/resource/8-track_tape> ;
       dc:description "Lear Jet Stereo 8 used as medium to record an audio manifestation."@en ;
@@ -283,7 +283,7 @@ mt:FLAC
 dbpedia:Free_Lossless_Audio_Codec
       is:info_service isi:dbpedia .
 
-mt:FourTrackCatridge
+mt:FourTrackCartridge
       rdf:type dcterms:PhysicalMedium , skos:Concept ;
       rdfs:seeAlso dbpedia:Stereo-Pak ;
       dc:description "Muntz Stereo-Pak used as medium to record an audio manifestation."@en ;
